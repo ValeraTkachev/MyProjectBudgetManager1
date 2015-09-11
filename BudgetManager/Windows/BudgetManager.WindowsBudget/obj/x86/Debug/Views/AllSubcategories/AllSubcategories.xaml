@@ -1,0 +1,498 @@
+﻿<common:ViewBase
+    x:Name="pageRoot"
+    x:Class="BudgetManager.WindowsBudget.Views.AllSubcategories.AllSubcategories"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BudgetManager.WindowsBudget.Views.AllSubcategories"
+    xmlns:common="using:BudgetManager.WindowsBudget.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:datavis="using:WinRTXamlToolkit.Controls.DataVisualization"  
+    xmlns:charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting" 
+    xmlns:VM="using:BudgetManager.Shared"
+    xmlns:converter="using:BudgetManager.Core.Converters"
+    xmlns:mybehaviours="using:BudgetManager.WindowsBudget.Behaviors" 
+    DataContext="{Binding Source={StaticResource Locator}, Path=AllSubcategoriesViewModel}"
+    xmlns:controls="using:BudgetManager.WindowsBudget.Views.Controls" 
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        
+        <converter:BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
+
+        <LinearGradientBrush x:Key="ForPiggy" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="{StaticResource ForExpenseRectangle}" 
+                          Offset="{Binding Path =  FoundedCategory.RestPercent }" />
+            <GradientStop Color="{StaticResource ForRestRectangle}" 
+                          Offset="{Binding Path =  FoundedCategory.RestPercent  }" />
+        </LinearGradientBrush>
+
+        <Style x:Key="MyPiggy" TargetType="ContentControl">
+            
+            <Setter Property="Template">
+                
+                <Setter.Value>
+                    
+                    <ControlTemplate TargetType="ContentControl">
+                        
+                        <Path Fill="{StaticResource ForPiggy}"
+                              Data="F1M46.295,71.174C41.726,71.174 38.038,74.878 38.038,79.466C38.038,84.054 41.726,87.758 46.295,87.758C50.864,87.758 54.552,84.054 54.552,79.466C54.552,74.878 50.864,71.174 46.295,71.174zM39.128,28.628C47.554,28.604 58.158,29.963 67.378,35.352C69.488,34.818 71.654,34.357 73.837,33.989C73.966,34.339 74.112,34.707 74.259,35.057C75.654,38.374 77.654,41.341 80.186,43.884C80.681,44.381 81.195,44.861 81.727,45.321C79.966,45.487 78.388,45.69 77.085,45.892C74.7,46.261 73.121,48.601 73.69,50.96C73.69,50.96 73.69,50.978 73.69,50.978C74.186,53.06 76.204,54.406 78.314,54.092C85.489,53.005 101.838,51.697 116.481,58.644C118.408,59.565 120.738,58.828 121.802,56.967C123.013,54.866 122.169,52.176 119.986,51.144C117.839,50.131 115.6,49.246 113.27,48.472C115.472,47.238 117.49,45.69 119.288,43.884C120.646,42.52 121.839,41.028 122.885,39.443C130.922,42.834 138.408,47.495 144.867,53.466C155.932,63.674 162.537,77.697 163.785,92.291C164.556,101.338 163.272,110.607 159.73,119.341C152.721,136.589 143.234,153.118 134.5,169.591C133.381,171.692 131.197,173 128.83,173C128.83,173 112.426,173 112.426,173C108.884,173 106.003,170.107 106.003,166.551C106.003,166.551 106.003,158.664 106.003,158.664C100.554,159.714 94.884,160.267 89.049,160.267C85.342,160.267 81.727,160.046 78.168,159.604C78.168,159.604 74.039,169.13 74.039,169.13C73.011,171.471 70.7,173 68.149,173C68.149,173 51.671,173 51.671,173C48.13,173 45.249,170.107 45.249,166.551C45.249,166.551 45.249,148.474 45.249,148.474C31.817,140.421 21.634,128.739 16.716,115.122C16.716,115.122 4.954,108.967 4.954,108.967C3.138,108.009 2,106.129 2,104.066C2,104.066 2,83.649 2,83.649C2,80.59 4.477,78.102 7.523,78.121C7.523,78.121 16.587,78.158 16.587,78.158C20.092,68.299 26.331,59.454 34.588,52.231C34.588,52.231 27.157,36.937 27.157,36.937C25.487,33.473 27.744,29.382 31.56,29.013C33.753,28.797 36.319,28.635 39.128,28.628zM99.746,2C111.967,2 121.894,11.95 121.875,24.241C121.875,29.179 120.279,33.731 117.582,37.416C114.334,41.857 109.471,45.045 103.857,46.095C102.535,46.353 101.159,46.482 99.746,46.482C96.865,46.482 94.113,45.929 91.599,44.934C86.186,42.778 81.801,38.54 79.47,33.196C78.259,30.451 77.599,27.429 77.599,24.241C77.599,11.95 87.507,2 99.746,2z"/>
+                  
+                    </ControlTemplate>
+                    
+                </Setter.Value>
+                
+            </Setter>
+
+        </Style>
+
+    </Page.Resources>
+
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Auto">
+        
+        <Grid Background="{StaticResource BackgroundBrush}">
+            <Grid.ChildrenTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition/>
+                </TransitionCollection>
+            </Grid.ChildrenTransitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Style="{StaticResource BackButtonStyle}"  Command="{Binding Back}" />
+
+                <TextBlock Text="{Binding Path=FoundedCategory.Name}" Style="{StaticResource HeaderTextBlock}" VerticalAlignment="Top" Margin="0,60,0,0" />
+                
+            </Grid>
+            
+            <Grid>
+                
+                <StackPanel Orientation="Vertical"
+                            HorizontalAlignment="Right" 
+                            VerticalAlignment="Top"
+                            Margin="0,75,112,0">
+                    
+                    <StackPanel Orientation="Horizontal">
+                        
+                        <TextBlock x:Uid="spent"
+                                   Foreground="{Binding Path = FoundedCategory.Color}"
+                                   Margin="0,0,3,0"/>
+                        
+                        <TextBlock Text="{Binding Path= FoundedCategory.Remaining,Mode=TwoWay}" 
+                                   Foreground="{Binding Path = FoundedCategory.Color}"/>
+                        
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Horizontal">
+                        
+                        <TextBlock x:Uid="budgetmessage"
+                                   Foreground="{StaticResource ForAddButtonBrush}"
+                                   Margin="0,0,3,0"/>
+                        
+                        <TextBlock Text="{Binding Path= FoundedCategory.Budgeted,Mode=TwoWay}" 
+                                   Foreground="{StaticResource ForAddButtonBrush}"/>
+                        
+                    </StackPanel>
+                    
+                </StackPanel>
+                
+            </Grid>
+
+            <StackPanel Margin="0,140,0,0"
+                        Grid.RowSpan="2">
+                
+                <StackPanel Orientation="Horizontal">
+                    
+                    <Button Style="{StaticResource TextBlockButtonStyle}"
+                            Command="{Binding AllSubcategoriesCommand}">
+
+                        <TextBlock x:Uid="expensesMainTitle"
+                                   Margin="70,0,90,0" 
+                                   Style="{StaticResource HeaderTextBlockStyle}" 
+                                   FontSize="40"    
+                                   Foreground="{StaticResource ForMainText}"/>                       
+                    </Button>
+                    
+                    <Button Style="{StaticResource TextBlockButtonStyle}"
+                            Command="{Binding AllTransactionCommand}">
+                        
+                        <TextBlock x:Uid="trasnationsMainTitle"
+                                   Margin="0,0,90,0"
+                                   Style="{StaticResource HeaderTextBlockStyle}"
+                                   FontSize="40" 
+                                   Foreground="{StaticResource ForMainText}"/>                       
+                    </Button>
+                    
+                    <TextBlock x:Uid="statiscticTitle"
+                               Margin="-12,0,155,0" 
+                               Style="{StaticResource HeaderTextBlockStyle}"
+                               FontSize="40" 
+                               Width="250"
+                               Foreground="{StaticResource ForMainText}"
+                               Visibility="{Binding VisibilityChart,Mode=TwoWay, 
+                               Converter ={StaticResource BoolToVisibility}}"/>
+                    
+                    <TextBlock x:Uid="restTextBlock"
+                               Margin="15,0,90,0"
+                               Style="{StaticResource HeaderTextBlockStyle}" 
+                               FontSize="40"  
+                               Foreground="{StaticResource ForMainText}" />
+                    
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" 
+                            Width="620" 
+                            HorizontalAlignment="Left"
+                            Margin="12,0,0,0">
+                    <StackPanel Orientation="Vertical">
+                        
+                        <Button Style="{StaticResource AddButtonEllipseStyle}"   
+                                Margin="90,20,90,0" 
+                                Command="{Binding AddSubcategoryCommand}"/>
+
+                        <TextBlock x:Uid="plan"
+                                   VerticalAlignment="Bottom"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,0,0,0"
+                                   Style="{StaticResource AddTextBlockStyle}"  />
+                        
+                    </StackPanel>
+                    
+                    <Button x:Uid="addtransaction"
+                            Style="{StaticResource AddTransactionStyle}"
+                            Margin="40,0,0,0" 
+                            Width="300" 
+                            Command="{Binding AddTransactionCommand}"/>
+                    
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Height="451"
+                            Margin="10,0,0,0">
+
+                    <GridView  x:Name="gvMain"
+                               Style="{StaticResource subcategoriesGridView}"
+                               Grid.Row="2"  
+                               Margin="87,-6,0,0" 
+                               Width="185"
+                               ItemsSource="{Binding Subcategories}"                              
+                               SelectedItem="{Binding SelectedCategory,Mode=TwoWay}"
+                               ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="SelectionChanged">
+                                <core:InvokeCommandAction Command="{Binding SelectedSubcategory}"/>
+                            </core:EventTriggerBehavior>
+                            <core:EventTriggerBehavior EventName="GotFocus">
+                                <core:InvokeCommandAction Command="{Binding GotFocusSubcategoryCommand}"/>
+                            </core:EventTriggerBehavior>
+                            <mybehaviours:GridViewHeight/>
+                        </i:Interaction.Behaviors>
+
+                    </GridView>
+
+                    <controls:MyGridView  x:Name="gvetrans" 
+                                          Style="{StaticResource subTransactionsGridView}"
+                                          Grid.Row="3"   
+                                          Margin="37,-30,0,0"  
+                                          Width="310"
+                                          ItemsSource="{Binding Path = SelectedUser.Transactions}"
+                                          SelectionMode="Multiple"
+                                          BindableSelectedItems="{Binding SelectedTransactions}"
+                                          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="LostFocus">
+                                <core:InvokeCommandAction Command="{Binding SelectedItemTransaction}"/>
+                            </core:EventTriggerBehavior>
+                            <core:EventTriggerBehavior EventName="GotFocus">
+                                <core:InvokeCommandAction Command="{Binding GotFocusTransactionCommand}"/>
+                            </core:EventTriggerBehavior>
+                            <mybehaviours:GridViewHeight/>
+                        </i:Interaction.Behaviors>
+
+                    </controls:MyGridView>
+
+
+
+                    <StackPanel  HorizontalAlignment="Left"
+                                 VerticalAlignment="Center"  
+                                 Height="140" 
+                                 Grid.Row="2">
+                        
+                        <TextBlock FontSize="22"
+                                   x:Uid="message"
+                                   Margin="-220,0,0,0"
+                                   Foreground="{StaticResource ForMainText}" 
+                                   Visibility="{Binding VisibilityString,Mode=TwoWay,
+                                   Converter={StaticResource BoolToVisibility}}"/>
+
+                    </StackPanel>
+
+                    <Grid  Visibility="{Binding VisibilityChart,Mode=TwoWay, 
+                           Converter={StaticResource BoolToVisibility}}">
+                        
+                        <charting:Chart  Width="400"
+                                         Height="400"
+                                         Margin="0,-400,0,0">
+                            
+                            <charting:Chart.LegendStyle>
+                                
+                                <Style TargetType="datavis:Legend">
+                                    <Setter Property="Foreground" Value="{StaticResource ForMainText}"/>
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                </Style>
+                                
+                            </charting:Chart.LegendStyle>
+                            
+                            <charting:Chart.Series>
+                                
+                                <charting:PieSeries
+                                    Title="All user`s balans"
+                                    ItemsSource="{Binding Path=Subcategories}"
+                                    IndependentValueBinding="{Binding Name}"
+                                    DependentValueBinding="{Binding Remaining}"
+                                    IsSelectionEnabled="False" />
+                                
+                            </charting:Chart.Series>
+                            
+                        </charting:Chart>
+                        
+                        <Grid HorizontalAlignment="Center"
+                              VerticalAlignment="Top"
+                              Margin="-50,-42,0,0">
+
+                            <Ellipse Fill="Gray"
+                                     Width="277"
+                                     Height="277"
+                                     Opacity=".6"
+                                     Visibility="{Binding Path = AllBudgetVisibility,Mode=TwoWay,
+                                     Converter={StaticResource BoolToVisibility}}"/>
+
+                            <Ellipse Fill="Black" 
+                                     Width="160" 
+                                     Height="160"
+                                     Opacity=".2"/>
+                            <Grid>
+
+                                <Ellipse Fill="{StaticResource ForChartBackGround}"
+                                     Width="140"
+                                     Height="140"/>
+
+                                <TextBlock x:Uid="expensesMessage"
+                                           FontSize="18" 
+                                           Foreground="{StaticResource ForMainText}"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           Visibility="{Binding Path = AllBudgetVisibility,Mode=TwoWay,
+                                           Converter={StaticResource BoolToVisibility}}"/>
+                            </Grid>
+
+                        </Grid>
+
+                    </Grid>
+                    <StackPanel Orientation="Vertical" 
+                                Margin="20, -100,20,0" 
+                                Visibility="{Binding VisibilityStatistic,Mode=TwoWay,
+                                Converter={StaticResource BoolToVisibility}}">
+                        
+                        <StackPanel VerticalAlignment="Top" 
+                                    HorizontalAlignment="Right">
+                            
+                            <Grid Visibility="{Binding VisibilityStatistic,Mode=TwoWay, 
+                                  Converter={StaticResource BoolToVisibility}}">
+                                
+                                <Rectangle Width="300"
+                                           Height="50" >
+                                    
+                                    <Rectangle.Fill>
+                                        
+                                        <LinearGradientBrush StartPoint="1,0" EndPoint="0,0" >
+                                            
+                                            <GradientStop  Color="{StaticResource ForIncomeRectangle}"/>
+                                            
+                                        </LinearGradientBrush>
+                                        
+                                    </Rectangle.Fill>
+                                    
+                                </Rectangle>
+                                
+                                <TextBlock x:Uid="plannedTitle"
+                                           FontSize="20" 
+                                           HorizontalAlignment="Left"
+                                           VerticalAlignment="Center"/>
+                            </Grid>
+
+                            <Grid>
+                                
+                                <Rectangle Width="300"
+                                           Height="50" 
+                                           Margin="0,10,0,0" >
+                                    
+                                    <Rectangle.Fill>
+
+                                        <LinearGradientBrush StartPoint="1,0" EndPoint="0,0" >
+
+                                            <GradientStop Color="Gray"
+                                                          Offset="{Binding Path =  FoundedCategory.RestPercent}"/>
+                                            
+                                            <GradientStop Color="{StaticResource ForRestRectangle}"
+                                                          Offset="{Binding Path=   FoundedCategory.RestPercent}"/>
+
+                                        </LinearGradientBrush>
+
+                                    </Rectangle.Fill>
+                                    
+                                </Rectangle>
+                                
+                                <TextBlock x:Uid="restTextBlock"
+                                           FontSize="20" 
+                                           HorizontalAlignment="Left" 
+                                           VerticalAlignment="Center" 
+                                           Margin="0,10,0,0"/>
+                            </Grid>
+
+                            <Grid>
+                                <Rectangle Width="300"
+                                           Height="50"
+                                           Margin="0,10,0,0" >
+                                    <Rectangle.Fill>
+                                        
+                                        <LinearGradientBrush StartPoint="1,0" EndPoint="0,0" >
+
+                                            <GradientStop Color="Gray"
+                                                          Offset="{Binding Path =  FoundedCategory.Percent}"/>
+                                            
+                                            <GradientStop Color="{StaticResource ForExpenseRectangle}"
+                                                          Offset="{Binding Path=  FoundedCategory.Percent}"/>
+
+                                        </LinearGradientBrush>
+
+                                    </Rectangle.Fill>
+                                    
+                                </Rectangle>
+                                
+                                <TextBlock x:Uid="ExpensesTitle"
+                                           FontSize="20"
+                                           HorizontalAlignment="Left" 
+                                           VerticalAlignment="Center" 
+                                           Margin="0,10,0,0"/>
+                                
+                            </Grid>
+                        </StackPanel>
+ 
+                            <ContentControl Style="{StaticResource MyPiggy}"
+                                            HorizontalAlignment="Center"
+                                            Margin="0,60,0,0"/>
+                        
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,0,0">
+                            
+                            <TextBlock Text="$"  
+                                       Style="{StaticResource RestTextBlock}"/>
+                            
+                            <TextBlock Text="{Binding Path= FoundedCategory.Rest,Mode=TwoWay}"   
+                                       Style="{StaticResource RestTextBlock}"/>
+                        </StackPanel>
+
+                    </StackPanel>
+
+
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
+    </ScrollViewer>
+    <Page.BottomAppBar>
+        <AppBar x:Name="bottomAppBar" 
+                Padding="10,0,10,0" 
+                Background="{StaticResource ForAppBarBrush}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    
+                    <AppBarButton Name="editsubcategory"
+                                  x:Uid="editexpense"
+                                  Icon="Edit" 
+                                  Visibility="{Binding Unchosensub,Mode=TwoWay, 
+                                  Converter={StaticResource BoolToVisibility}}" 
+                                  Command="{Binding EditSubcategoryCommand}"/>
+
+
+                    <AppBarButton Name="edittransaction"
+                                  x:Uid="edittransaction"
+                                  Icon="Edit" 
+                                  Visibility="{Binding Unchosentrans,Mode=TwoWay, 
+                                  Converter={StaticResource BoolToVisibility}}" 
+                                  Command="{Binding EditTransactionCommand}"
+                                  IsEnabled="{Binding Enable}"/>
+
+
+                    <AppBarButton Name="deletetransaction"
+                                  x:Uid="delete"
+                                  Command="{Binding DeleteTransactionCommand}"
+                                  Visibility="{Binding Unchosentrans,Mode=TwoWay,
+                                  Converter={StaticResource BoolToVisibility}}">
+                        
+                        <AppBarButton.Icon>
+                            
+                            <FontIcon Glyph="&#xe106;"
+                                      FontFamily="Segoe UI Symbol" 
+                                      Margin="0,2,0,0"/>
+                            
+                        </AppBarButton.Icon>
+                        
+                    </AppBarButton>
+                    
+                    <AppBarButton Name="deletesubcategory"
+                                  x:Uid="delete"
+                                  Command="{Binding DeleteSubcategoryCommand}" 
+                                  Visibility="{Binding Unchosensub,Mode=TwoWay,
+                                  Converter={StaticResource BoolToVisibility}}">
+                        
+                        <AppBarButton.Icon>
+                            
+                            <FontIcon Glyph="&#xe106;"
+                                      FontFamily="Segoe UI Symbol" 
+                                      Margin="0,2,0,0"/>
+                            
+                        </AppBarButton.Icon>
+                        
+                    </AppBarButton>
+                    
+                </StackPanel>
+                <StackPanel Grid.Column="1"
+                            HorizontalAlignment="Right" 
+                            Orientation="Horizontal">
+                    
+                    <AppBarButton Name="addexpense"
+                                  x:Uid="addexpense"
+                                  Style="{StaticResource AddExpenseButtonStyle}"             
+                                  Command="{Binding AddSubcategoryCommand}"/>
+                    
+                    <AppBarButton Name="addtransaction"
+                                  x:Uid="addtransactionAppbar"
+                                  Style="{StaticResource AddTransactionButtonStyle}" 
+                                  Command="{Binding AddTransactionCommand}" />
+
+                </StackPanel>
+            </Grid>
+        </AppBar>
+
+    </Page.BottomAppBar>
+</common:ViewBase>
+

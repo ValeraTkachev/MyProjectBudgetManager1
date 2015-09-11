@@ -1,0 +1,46 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BudgetManager.WindowsBudget.Recources">
+
+    <SolidColorBrush x:Key="BlueColorBrush" Color="#4586d8" />
+  
+    <SolidColorBrush x:Key="RedColorBrush"  Color="#dc443f" />
+
+    <SolidColorBrush x:Key="GrayColorBrush" Color="#7D7F7E" />
+
+    <SolidColorBrush x:Key="ForCalendarRadioButton" Color="#2E48FF" />
+    
+    <SolidColorBrush x:Key="ForAppBarBrush" Color="#3147FD" />
+    
+    <SolidColorBrush x:Key="ForAddButtonBrush" Color="#7C7E7D" />
+    
+    <SolidColorBrush x:Key="ForBackGroundAddButton" Color="AliceBlue"/>
+    
+    <SolidColorBrush x:Key="ForMainText"  Color="Black"/>
+    
+    <SolidColorBrush x:Key="ForTransactions"  Color="#CDEBF9"/>
+    
+    <Color x:Key="ForIncomeRectangle">#F20E57</Color>
+    
+    <Color x:Key="ForRestRectangle">#F5AE0D</Color>
+    
+    <Color x:Key="ForExpenseRectangle">#5200E1</Color>
+
+    <SolidColorBrush x:Key="GrayForeground"  Color="#505050"/>
+    
+    <SolidColorBrush x:Key="GrayBackground"  Color="#A6A5A5"/>
+
+    <SolidColorBrush x:Key="ForIncomeChart"  Color="#F20E57" />
+
+    <SolidColorBrush x:Key="ForExpenseChart"  Color="#5200E1" />
+    
+    <SolidColorBrush x:Key="ForChartBackGround"  Color="#EDEDED" />
+    
+    <ImageBrush x:Key="BackgroundBrush" ImageSource="/Assets/bg.png"/>
+
+    <SolidColorBrush x:Key="ForDatepickerBackGround"  Color="#EBEBEB" />
+
+    <SolidColorBrush x:Key="ForDatepickerBackGround1"  Color="#EAEAEA" />
+
+</ResourceDictionary>

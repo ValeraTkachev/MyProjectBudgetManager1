@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Year" />
+    <RootPropertyPathName Name="MonthNumber" />
+    <RootPropertyPathName Name="Day" />
+    <RootPropertyPathName Name="Count" />
+    <RootPropertyPathName Name="TextColor" />
+    <RootPropertyPathName Name="AccountName" />
+    <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="IconName" />
+    <RootPropertyPathName Name="Budgeted" />
+    <RootPropertyPathName Name="Remaining" />
+    <RootPropertyPathName Name="Color" />
+    <RootPropertyPathName Name="AllSubcategoriesCommand" />
+    <RootPropertyPathName Name="MainPageViewModel" />
+    <RootPropertyPathName Name="Icon" />
+    <RootPropertyPathName Name="StrokeColor" />
+    <RootPropertyPathName Name="Percent" />
+    <RootPropertyPathName Name="Type" />
+    <RootPropertyPathName Name="Rest" />
+    <RootPropertyPathName Name="CountExpense" />
+    <RootPropertyPathName Name="CountIncome" />
+    <RootPropertyPathName Name="Text" />
+    <RootPropertyPathName Name="Image" />
+    <RootPropertyPathName Name="Foreground" />
+    <RootPropertyPathName Name="Content" />
+    <RootPropertyPathName Name="AccountPageViewModel" />
+    <RootPropertyPathName Name="IsPopupUpdateOpen" />
+    <RootPropertyPathName Name="UpdateCommand" />
+    <RootPropertyPathName Name="Icons" />
+    <RootPropertyPathName Name="SelectedUpdateIcon" />
+    <RootPropertyPathName Name="Colors" />
+    <RootPropertyPathName Name="SelectedUpdateColor" />
+    <RootPropertyPathName Name="UpdateName" />
+    <RootPropertyPathName Name="IsPopupAddOpen" />
+    <RootPropertyPathName Name="AddCommand" />
+    <RootPropertyPathName Name="SelectedIcon" />
+    <RootPropertyPathName Name="SelectedColor" />
+    <RootPropertyPathName Name="NewName" />
+    <RootPropertyPathName Name="Users" />
+    <RootPropertyPathName Name="SelectedUser" />
+    <RootPropertyPathName Name="SelectedUserFocus" />
+    <RootPropertyPathName Name="PopupAddWindowOpenCommand" />
+    <RootPropertyPathName Name="DeleteClickCommand" />
+    <RootPropertyPathName Name="Unchosen" />
+    <RootPropertyPathName Name="EditClickCommand" />
+    <RootPropertyPathName Name="AddExcpenceViewModel" />
+    <RootPropertyPathName Name="NewIcon" />
+    <RootPropertyPathName Name="NewColor" />
+    <RootPropertyPathName Name="NewUser" />
+    <RootPropertyPathName Name="NewBudgeted" />
+    <RootPropertyPathName Name="AddIncomeViewModel" />
+    <RootPropertyPathName Name="Categoriesaccount" />
+    <RootPropertyPathName Name="SelectedMoneyAccount" />
+    <RootPropertyPathName Name="AddMoneyAccountViewModel" />
+    <RootPropertyPathName Name="AddSubcategoryViewModel" />
+    <RootPropertyPathName Name="AddSubcategoryCommand" />
+    <RootPropertyPathName Name="AddTransactionViewModel" />
+    <RootPropertyPathName Name="AddTransactionClick" />
+    <RootPropertyPathName Name="SelectionRest" />
+    <RootPropertyPathName Name="VisibilityOfSendingFields" />
+    <RootPropertyPathName Name="NewCount" />
+    <RootPropertyPathName Name="TextChange" />
+    <RootPropertyPathName Name="SelectedCategory" />
+    <RootPropertyPathName Name="VisibilityOfIncomeFields" />
+    <RootPropertyPathName Name="Categoriesincome" />
+    <RootPropertyPathName Name="VisibilityOfExpenseFields" />
+    <RootPropertyPathName Name="Categoriesexpense" />
+    <RootPropertyPathName Name="EnableSending" />
+    <RootPropertyPathName Name="SendingClick" />
+    <RootPropertyPathName Name="EnableIncome" />
+    <RootPropertyPathName Name="IncomeClick" />
+    <RootPropertyPathName Name="ExpenseClick" />
+    <RootPropertyPathName Name="EnableExpense" />
+    <RootPropertyPathName Name="AllExpenseViewModel" />
+    <RootPropertyPathName Name="ShowLinearExpense" />
+    <RootPropertyPathName Name="AccountVisibility" />
+    <RootPropertyPathName Name="SelectItem" />
+    <RootPropertyPathName Name="IncomeVisibility" />
+    <RootPropertyPathName Name="ExpenseVisibility" />
+    <RootPropertyPathName Name="AddMoneyAccountCommand" />
+    <RootPropertyPathName Name="AddIncomeCommand" />
+    <RootPropertyPathName Name="PeriodCommand" />
+    <RootPropertyPathName Name="YearCommand" />
+    <RootPropertyPathName Name="MonthCommand" />
+    <RootPropertyPathName Name="WeekCommand" />
+    <RootPropertyPathName Name="DayCommand" />
+    <RootPropertyPathName Name="SecondDate" />
+    <RootPropertyPathName Name="SecondDateVisibility" />
+    <RootPropertyPathName Name="SecondDateChangeCommand" />
+    <RootPropertyPathName Name="ThisDate" />
+    <RootPropertyPathName Name="DateChangeCommand" />
+    <RootPropertyPathName Name="SelectionUserChange" />
+    <RootPropertyPathName Name="DeleteCommand" />
+    <RootPropertyPathName Name="UnchosenAccount" />
+    <RootPropertyPathName Name="EditMoneyAccountCommand" />
+    <RootPropertyPathName Name="UnchosenIncome" />
+    <RootPropertyPathName Name="EditIncomeCommand" />
+    <RootPropertyPathName Name="UnchosenExpense" />
+    <RootPropertyPathName Name="EditExpenseCommand" />
+    <RootPropertyPathName Name="AllSubcategoriesViewModel" />
+    <RootPropertyPathName Name="FoundedCategory" />
+    <RootPropertyPathName Name="RestPercent" />
+    <RootPropertyPathName Name="VisibilityStatistic" />
+    <RootPropertyPathName Name="VisibilityChart" />
+    <RootPropertyPathName Name="AllBudgetVisibility" />
+    <RootPropertyPathName Name="Subcategories" />
+    <RootPropertyPathName Name="VisibilityString" />
+    <RootPropertyPathName Name="Transactions" />
+    <RootPropertyPathName Name="SelectedTransactions" />
+    <RootPropertyPathName Name="GotFocusTransactionCommand" />
+    <RootPropertyPathName Name="SelectedItemTransaction" />
+    <RootPropertyPathName Name="GotFocusSubcategoryCommand" />
+    <RootPropertyPathName Name="SelectedSubcategory" />
+    <RootPropertyPathName Name="AddTransactionCommand" />
+    <RootPropertyPathName Name="AllTransactionCommand" />
+    <RootPropertyPathName Name="Back" />
+    <RootPropertyPathName Name="DeleteSubcategoryCommand" />
+    <RootPropertyPathName Name="Unchosensub" />
+    <RootPropertyPathName Name="DeleteTransactionCommand" />
+    <RootPropertyPathName Name="Unchosentrans" />
+    <RootPropertyPathName Name="EditTransactionCommand" />
+    <RootPropertyPathName Name="Enable" />
+    <RootPropertyPathName Name="EditSubcategoryCommand" />
+    <RootPropertyPathName Name="AlltransactionsViewModel" />
+    <RootPropertyPathName Name="Items" />
+    <RootPropertyPathName Name="Height" />
+    <RootPropertyPathName Name="Width" />
+    <RootPropertyPathName Name="Unchosengridview" />
+    <RootPropertyPathName Name="Title" />
+    <RootPropertyPathName Name="Chosengridview" />
+    <RootPropertyPathName Name="TotalExpense" />
+    <RootPropertyPathName Name="TotalIncome" />
+    <RootPropertyPathName Name="Categories" />
+    <RootPropertyPathName Name="SelectionChangedCategory" />
+    <RootPropertyPathName Name="SelectionChangedUser" />
+    <RootPropertyPathName Name="SortingCommand" />
+    <RootPropertyPathName Name="GroupCommand" />
+    <RootPropertyPathName Name="Unchosenappbar" />
+    <RootPropertyPathName Name="HeightForList" />
+    <RootPropertyPathName Name="Years" />
+    <RootPropertyPathName Name="NewYear" />
+    <RootPropertyPathName Name="SelectionChangedYear" />
+    <RootPropertyPathName Name="Monthes" />
+    <RootPropertyPathName Name="NewMonth" />
+    <RootPropertyPathName Name="Dayscount" />
+    <RootPropertyPathName Name="NewDay" />
+    <RootPropertyPathName Name="EditExpenseViewModel" />
+    <RootPropertyPathName Name="EditTransactionViewModel" />
+    <RootPropertyPathName Name="CategoriesSender" />
+    <RootPropertyPathName Name="CategorySender" />
+    <RootPropertyPathName Name="CategoriesReciever" />
+    <RootPropertyPathName Name="CategoryReciever" />
+    <RootPropertyPathName Name="SelectedTransaction" />
+    <RootPropertyPathName Name="Visibility" />
+    <RootPropertyPathName Name="ExpensePercent" />
+    <RootPropertyPathName Name="Income" />
+    <RootPropertyPathName Name="Expense" />
+    <RootPropertyPathName Name="StatisticCategories" />
+    <RootPropertyPathName Name="StatisticType" />
+    <RootPropertyPathName Name="GotFocusOnTransaction" />
+    <RootPropertyPathName Name="GotFocusOnExpense" />
+    <RootPropertyPathName Name="SelectedItemExpense" />
+    <RootPropertyPathName Name="SelectedIndex" />
+    <RootPropertyPathName Name="GotFocusOnIncome" />
+    <RootPropertyPathName Name="SelectedItemIncome" />
+    <RootPropertyPathName Name="GotFocusOnAccount" />
+    <RootPropertyPathName Name="SelectedItemAccount" />
+    <RootPropertyPathName Name="ExpenseCommand" />
+    <RootPropertyPathName Name="IncomeCommand" />
+    <RootPropertyPathName Name="AccountCommand" />
+    <RootPropertyPathName Name="Deletevisibility" />
+    <RootPropertyPathName Name="Unchosenaccount" />
+    <RootPropertyPathName Name="Unchosenincome" />
+    <RootPropertyPathName Name="Chosen" />
+    <RootPropertyPathName Name="MoneyTransactionModelView" />
+    <RootPropertyPathName Name="UserReciever" />
+    <RootPropertyPathName Name="RecieverAccounts" />
+    <RootPropertyPathName Name="UserSender" />
+    <RootPropertyPathName Name="SenderAccounts" />
+    <RootPropertyPathName Name="SelectedCategoryViewModel" />
+    <RootPropertyPathName Name="GraphicViewModel" />
+    <RootPropertyPathName Name="FullDate" />
+    <RootPropertyPathName Name="Planned" />
+    <RootPropertyPathName Name="StatisticViewModel" />
+    <RootPropertyPathName Name="Enablecolumn" />
+    <RootPropertyPathName Name="SelectColumnChartCommand" />
+    <RootPropertyPathName Name="Enabledohnut" />
+    <RootPropertyPathName Name="SelectedDohnutChartCommand" />
+    <RootPropertyPathName Name="Visibilitycolumn" />
+    <RootPropertyPathName Name="Visibilitydohnut" />
+    <RootPropertyPathName Name="UserExpense" />
+    <RootPropertyPathName Name="Output" />
+    <RootPropertyPathName Name="ExpensesVisibility" />
+    <RootPropertyPathName Name="UserIncome" />
+    <RootPropertyPathName Name="IncomesVisibility" />
+  </Roots.PropertyPathNames>
+  <Roots.RootTypes>
+    <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.ResourceDictionary">
+      <RootProperty Name="MergedDictionaries" />
+      <RootProperty Name="Source" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.ViewModel.ViewModelLocator" />
+    <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
+      <RootProperty Name="Color" />
+    </RootType>
+    <RootType FullName="Windows.UI.Color" />
+    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
+      <RootProperty Name="ImageSource" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="LineHeight" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="TextAlignment" />
+      <RootProperty Name="TextTrimming" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="FontFamily" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.FrameworkElement">
+      <RootProperty Name="Name" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="MinHeight" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.UIElement">
+      <RootProperty Name="IsHitTestVisible" />
+      <RootProperty Name="Opacity" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ChildrenTransitions" />
+      <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="Visibility" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
+      <RootMethod Name="GetRowSpan" />
+      <RootMethod Name="SetRowSpan" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Primitives.ButtonBase" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Template" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="IsEnabled" />
+      <RootProperty Name="BorderThickness" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
+      <RootProperty Name="Command" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="IsChecked" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Style" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="IsReadOnly" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Label" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="IsEnabled" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ContentControl">
+      <RootProperty Name="ContentTemplate" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
+      <RootMethod Name="GetAutomationId" />
+      <RootMethod Name="SetAutomationId" />
+      <RootMethod Name="GetName" />
+      <RootMethod Name="SetName" />
+    </RootType>
+    <RootType FullName="StoreAppLib.Controls.DatePicker">
+      <RootProperty Name="DateTodayForeground" />
+      <RootProperty Name="MonthHeaderBackground" />
+      <RootProperty Name="SelectedDateBackground" />
+      <RootProperty Name="DateForeground" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Date" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="HorizontalScrollBarVisibility" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="Content" />
+      <RootMethod Name="GetVerticalScrollBarVisibility" />
+      <RootMethod Name="SetVerticalScrollBarVisibility" />
+      <RootMethod Name="GetHorizontalScrollBarVisibility" />
+      <RootMethod Name="SetHorizontalScrollBarVisibility" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ItemsControl">
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="SelectedIndex" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView" />
+    <RootType FullName="Windows.UI.Xaml.Setter">
+      <RootProperty Name="Property" />
+      <RootProperty Name="Value" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Child" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Visibility" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Path" />
+      <RootProperty Name="RelativeSource" />
+      <RootProperty Name="Mode" />
+      <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="Template" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="IsEnabled" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Visibility" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ControlTemplate">
+      <RootProperty Name="TargetType" />
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="StrokeThickness" />
+      <RootProperty Name="Stroke" />
+      <RootProperty Name="Fill" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Visibility" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.LinearGradientBrush">
+      <RootProperty Name="StartPoint" />
+      <RootProperty Name="EndPoint" />
+      <RootProperty Name="GradientStops" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.GradientStop">
+      <RootProperty Name="Color" />
+      <RootProperty Name="Offset" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="RadiusX" />
+      <RootProperty Name="RadiusY" />
+      <RootProperty Name="Fill" />
+      <RootProperty Name="StrokeThickness" />
+      <RootProperty Name="Stroke" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Path">
+      <RootProperty Name="Fill" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="Data" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.RelativeSource">
+      <RootProperty Name="Mode" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.VisualStateManager">
+      <RootMethod Name="GetVisualStateGroups" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.TemplateBindingExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ContentPresenter">
+      <RootProperty Name="Content" />
+      <RootProperty Name="ContentTemplate" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.VisualStateGroup">
+      <RootProperty Name="States" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.VisualState">
+      <RootProperty Name="Storyboard" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.Storyboard">
+      <RootProperty Name="Children" />
+      <RootMethod Name="GetTargetName" />
+      <RootMethod Name="SetTargetName" />
+      <RootMethod Name="GetTargetProperty" />
+      <RootMethod Name="SetTargetProperty" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames">
+      <RootProperty Name="KeyFrames" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame">
+      <RootProperty Name="KeyTime" />
+      <RootProperty Name="Value" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Common.ViewBase">
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Resources" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="BottomAppBar" />
+    </RootType>
+    <RootType FullName="System.String" />
+    <RootType FullName="BudgetManager.Core.Converters.BooleanToVisibilityConverter" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition" />
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Controls.MainPanel" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Primitives.Popup">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="IsOpen" />
+      <RootProperty Name="Child" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Controls.ExtendedTextBoxForNames">
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Style" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
+      <RootMethod Name="GetBehaviors" />
+      <RootMethod Name="SetBehaviors" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Behaviors.EmptyComboBox" />
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.EventTriggerBehavior">
+      <RootProperty Name="EventName" />
+      <RootProperty Name="Actions" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Behaviors.GridViewHeightAndWidth" />
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.InvokeCommandAction">
+      <RootProperty Name="Command" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBar">
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.NavigateToPageAction">
+      <RootProperty Name="TargetPage" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.FontIcon">
+      <RootProperty Name="Glyph" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Views.AccountPage.AccountPage" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Controls.TextBoxForNames">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Text" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Behaviors.NumericTextBox" />
+    <RootType FullName="BudgetManager.WindowsBudget.Behaviors.EmptyTextBox" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.AddExpence.AddExpence" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Controls.DatePanel" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.AddIncome.AddIncome" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.AddMoneyAccount.AddMoneyAccount" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.AddSubcategory.AddSubcategory" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Controls.ExtendedDatePanel" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.AddTransaction.AddTransactionExpense" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.AllExpense.AllExpense" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Controls.MyGridView">
+      <RootProperty Name="Style" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="BindableSelectedItems" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="GroupStyle" />
+    </RootType>
+    <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="LegendStyle" />
+      <RootProperty Name="Series" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="Palette" />
+      <RootProperty Name="Title" />
+      <RootProperty Name="Foreground" />
+    </RootType>
+    <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Legend" />
+    <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Charting.PieSeries">
+      <RootProperty Name="Title" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="IndependentValueBinding" />
+      <RootProperty Name="DependentValueBinding" />
+      <RootProperty Name="IsSelectionEnabled" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Behaviors.GridViewHeight" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.AllSubcategories.AllSubcategories" />
+    <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
+      <RootProperty Name="Source" />
+      <RootProperty Name="IsSourceGrouped" />
+      <RootProperty Name="ItemsPath" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.GroupStyle">
+      <RootProperty Name="HeaderTemplate" />
+      <RootProperty Name="Panel" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.VariableSizedWrapGrid">
+      <RootProperty Name="MaximumRowsOrColumns" />
+      <RootProperty Name="Orientation" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Alltransactions.Alltransactions" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Controls.MyListView">
+      <RootProperty Name="Style" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="BindableSelectedItems" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="GroupStyle" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Alltransactions.ListViewTransactions" />
+    <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Views.EditExpense.EditExpense" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.EditTransaction.EditTransaction" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.LinearExpence.LinearExpence" />
+    <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.MainPage.MainPage" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.MoneyTransaction.MoneyTransaction" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Selectedcategory.SelectedCategoriesLinear" />
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Selectedcategory.SelectedCategory" />
+    <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries">
+      <RootProperty Name="Title" />
+      <RootProperty Name="IndependentValueBinding" />
+      <RootProperty Name="DependentValueBinding" />
+      <RootProperty Name="IsSelectionEnabled" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="DataPointStyle" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Statistic.Graphic" />
+    <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Charting.ColumnSeries">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="IndependentValueBinding" />
+      <RootProperty Name="DependentValueBinding" />
+      <RootProperty Name="IsSelectionEnabled" />
+    </RootType>
+    <RootType FullName="BudgetManager.WindowsBudget.Views.Statistic.Statistic" />
+  </Roots.RootTypes>
+</Roots>

@@ -1,0 +1,299 @@
+﻿<common:ViewBase
+    x:Name="pageRoot"
+    x:Class="BudgetManager.WindowsBudget.Views.AccountPage.AccountPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BudgetManager.WindowsBudget.Views.AccountPage"
+    xmlns:common="using:BudgetManager.WindowsBudget.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:VM="using:BudgetManager.Shared"
+    xmlns:converter="using:BudgetManager.Core.Converters"
+    xmlns:custombehaviors="using:BudgetManager.WindowsBudget.Behaviors"
+    xmlns:controls="using:BudgetManager.WindowsBudget.Views.Controls"
+    DataContext="{Binding Source={StaticResource Locator}, Path=AccountPageViewModel}"   
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <x:String x:Key="AppName">My Application</x:String>
+        <converter:BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
+    </Page.Resources>
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" Background="{StaticResource ForAppBarBrush}" VerticalScrollBarVisibility="Disabled">
+
+        <Grid Background="{StaticResource BackgroundBrush}">
+            <Grid.ChildrenTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition/>
+                </TransitionCollection>
+            </Grid.ChildrenTransitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <controls:MainPanel/>
+
+                <Grid Margin="120,10,0,0" 
+              Grid.Row="1">
+                <StackPanel Margin="0,0,0,0">
+                    <Button x:Name="createButton"
+                            x:Uid="createAccount"
+                            Style="{StaticResource AddAccountStyle}"
+                            Command="{Binding PopupAddWindowOpenCommand}" Width="300"/>
+
+                    <GridView x:Name="usersList"  
+                              ItemsSource="{Binding Users}" 
+                              SelectedItem="{Binding SelectedUser,Mode=TwoWay}"     
+                              Style="{StaticResource userGridView}">
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="SelectionChanged">
+                                <core:InvokeCommandAction Command="{Binding SelectedUserFocus}"/>
+                            </core:EventTriggerBehavior>
+                            <custombehaviors:GridViewHeightAndWidth/>
+                        </i:Interaction.Behaviors>
+                    </GridView>
+                </StackPanel>
+            </Grid>
+
+            <StackPanel>
+
+                <Popup x:Name="AddItemPopup"
+                       Grid.Row="1" 
+                       Width="378"
+                       Height="217" 
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Bottom" 
+                       Margin="0,380,20,0"
+                       IsOpen="{Binding IsPopupAddOpen,Mode=TwoWay}" >
+
+                    <StackPanel Background="Blue"
+                            Width="375">
+
+                        <Border Background="{StaticResource ForBackGroundAddButton}"
+                            BorderThickness="4"
+                            HorizontalAlignment="Left"
+                            Width="375" >
+
+                            <Grid x:Name="detailsGrid"
+                              Background="{StaticResource BackgroundBrush}" >
+
+                                <StackPanel Margin="10,0,-10,0">
+                                    <StackPanel>
+                                        <TextBlock x:Uid="addNameTextBlock"
+                                               FontSize="21"
+                                               Foreground="{StaticResource ForAppBarBrush}" />
+
+                                        <controls:ExtendedTextBoxForNames x:Name="nameBox" 
+                                         TextWrapping="Wrap"
+                                         FontSize="25" 
+                                         Margin="0,0,19,50"
+                                         BorderBrush="Blue"  
+                                         Text="{Binding NewName,Mode=TwoWay}" />
+
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock x:Uid="addColorTextBlock"
+                                               FontSize="21"  
+                                               Width="205"
+                                               Foreground="{StaticResource ForAppBarBrush}"/>
+
+                                        <TextBlock x:Uid="addIconTextBlock"
+                                               FontSize="21" 
+                                               Foreground="{StaticResource ForAppBarBrush}"
+                                               Width="81"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal"  Margin="0,0,10,50">
+                                        <ComboBox x:Name="colorBox" 
+                                              FontSize="14" 
+                                              Width="146" 
+                                              Height="40" 
+                                              BorderBrush="Blue"
+                                              ItemsSource="{Binding Colors}"
+                                              Margin="1,0,60,0" 
+                                              SelectedItem="{Binding SelectedColor,Mode=TwoWay}"
+                                              Style="{StaticResource colorCombobox}">
+
+                                            <i:Interaction.Behaviors>
+                                                <custombehaviors:EmptyComboBox/>
+                                            </i:Interaction.Behaviors>
+                                        </ComboBox>
+                                        <ComboBox x:Name="iconComboBox"
+                                              FontSize="14" 
+                                              Width="146" 
+                                              Height="40" 
+                                              BorderBrush="Blue"
+                                              ItemsSource="{Binding Icons}" 
+                                              Margin="1,0,60,0" 
+                                              SelectedItem="{Binding SelectedIcon, Mode=TwoWay}"
+                                              Style="{StaticResource iconCombobox}">
+                                            <i:Interaction.Behaviors>
+                                                <custombehaviors:EmptyComboBox/>
+                                            </i:Interaction.Behaviors>
+                                        </ComboBox>
+                                    </StackPanel>
+
+                                    <Button x:Name="AddAccount"
+                                            x:Uid="addAccountButton"
+                                            Width="362"
+                                            Style="{StaticResource AddButtonStyle}"
+                                            Command="{Binding AddCommand}">
+                                    </Button>
+
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </Popup>
+            </StackPanel>
+
+            <StackPanel>
+                <Popup x:Name="UpdateItemPopup" 
+                   Width="378" 
+                   Height="217" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Bottom"
+                   Margin="0,380,20,0"
+                   IsOpen="{Binding IsPopupUpdateOpen,Mode=TwoWay}">
+
+                    <StackPanel Background="Blue" 
+                            Width="375">
+                        <Border Background="{StaticResource ForBackGroundAddButton}"
+                            BorderThickness="4" 
+                            HorizontalAlignment="Left"
+                            Width="375" >
+
+                            <Grid x:Name="details1Grid"
+                              Background="{StaticResource BackgroundBrush}">
+
+                                <StackPanel Margin="10,0,-10,0">
+
+                                    <TextBlock x:Uid="addNameTextBlock"
+                                           FontSize="21"
+                                           Foreground="{StaticResource ForAppBarBrush}" />
+
+                                    <controls:ExtendedTextBoxForNames x:Name="updatenameBox" 
+                                         FontSize="25"
+                                         Margin="0,0,19,50" 
+                                         BorderBrush="Blue"
+                                         Text="{Binding Path = UpdateName,Mode=TwoWay}"   />
+
+                                    <StackPanel Orientation="Horizontal">
+
+                                        <TextBlock x:Uid="addColorTextBlock"
+                                               FontSize="21"  
+                                               Width="205"
+                                               Foreground="{StaticResource ForAppBarBrush}"/>
+
+                                        <TextBlock x:Uid="addIconTextBlock"
+                                               FontSize="21" 
+                                               Foreground="{StaticResource ForAppBarBrush}"
+                                               Width="81"/>
+
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal"  Margin="0,0,10,50">
+
+                                        <ComboBox x:Name="updatecolorBox"
+                                              FontSize="14"
+                                              Width="146" 
+                                              Height="40"
+                                              BorderBrush="Blue"
+                                              ItemsSource="{Binding Colors}" 
+                                              Margin="1,0,60,0" 
+                                              SelectedItem="{Binding SelectedUpdateColor,Mode=TwoWay}"
+                                              Style="{StaticResource colorCombobox}">                                           
+                                        </ComboBox>
+                                        
+                                        <ComboBox x:Name="updateiconComboBox" 
+                                              FontSize="14"  
+                                              Width="146" 
+                                              Height="40" 
+                                              BorderBrush="Blue"
+                                              ItemsSource="{Binding Icons}" 
+                                              Margin="1,0,60,0"
+                                              SelectedItem="{Binding SelectedUpdateIcon,Mode=TwoWay}"
+                                              Style="{StaticResource iconCombobox}">
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <Button x:Name="UpdateAccount"
+                                            x:Uid="addAccountButton"
+                                            Style="{StaticResource AddButtonStyle}"                                           
+                                            Command="{Binding UpdateCommand}"
+                                            Width="362"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </Popup>
+            </StackPanel>
+
+        </Grid>
+        
+    </ScrollViewer>
+    
+    <Page.BottomAppBar>
+        <AppBar x:Name="bottomAppBar" Padding="10,0,10,0" Background="{StaticResource ForAppBarBrush}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    
+                    <AppBarButton Name="edit"
+                                  Label="Редактировать"
+                                  x:Uid="edit"
+                                  Icon="Edit" 
+                                  Command="{Binding EditClickCommand}" 
+                                  Visibility="{Binding Unchosen,Mode=TwoWay, Converter={StaticResource BoolToVisibility}}">
+                    </AppBarButton>
+
+                    <AppBarButton Name="delete"
+                                  x:Uid="delete" 
+                                  Label="Удалить" 
+                                  Command="{Binding DeleteClickCommand}" 
+                                  Visibility="{Binding Unchosen,Mode=TwoWay, Converter={StaticResource BoolToVisibility}}" >
+                        <AppBarButton.Icon>
+                            
+                            <FontIcon Glyph="&#xe106;" 
+                                      FontFamily="Segoe UI Symbol" 
+                                      Margin="0,2,0,0"/>
+                            
+                        </AppBarButton.Icon>                     
+                    </AppBarButton>
+                    
+                </StackPanel>
+                
+                <StackPanel Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+
+                    <AppBarButton x:Uid="paymentAppbar"
+                                  Name="payment" 
+                                  Label="Осуществить оплату" 
+                                  Style="{StaticResource AddTransactionButtonStyle}" >
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Click">
+                                <core:NavigateToPageAction TargetPage="BudgetManager.WindowsBudget.Views.MoneyTransaction.MoneyTransaction"/>
+                            </core:EventTriggerBehavior>
+                        </i:Interaction.Behaviors>
+                    </AppBarButton>
+
+                    <AppBarButton x:Uid="createAccountAppbar"
+                                  Name="add" 
+                                  Label="Добавить аккакунт" 
+                                  Icon="Add" 
+                                  Command="{Binding PopupAddWindowOpenCommand}" />
+                    
+                </StackPanel>
+            </Grid>
+        </AppBar>
+
+    </Page.BottomAppBar>
+</common:ViewBase>
+

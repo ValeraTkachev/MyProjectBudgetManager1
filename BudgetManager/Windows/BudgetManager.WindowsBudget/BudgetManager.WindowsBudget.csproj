@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\SQLitePCL.3.8.7.2\build\netcore451\SQLitePCL.props" Condition="Exists('..\..\packages\SQLitePCL.3.8.7.2\build\netcore451\SQLitePCL.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0D1CE26-A17B-4FDC-A10F-AC6FA27460B2}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BudgetManager.WindowsBudget</RootNamespace>
+    <AssemblyName>BudgetManager.WindowsBudget</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>BudgetManager.WindowsBudget_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <NuGetPackageImportStamp>8a354347</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>3.0</MultilingualAppToolkitVersion>
+    <MakePriLog>$(Temp)\$(MSBuildProjectName)_Multilingual.prilog.xml</MakePriLog>
+    <AppxGenerateProjectPriFileAdditionalMakepriExeParameters>/IndexLog "$(MakePriLog)"</AppxGenerateProjectPriFileAdditionalMakepriExeParameters>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Behaviors\Behavior.cs" />
+    <Compile Include="Behaviors\EmptyComboBox.cs" />
+    <Compile Include="Behaviors\EmptyTextBox.cs" />
+    <Compile Include="Behaviors\GridViewHeight.cs" />
+    <Compile Include="Behaviors\GridViewHeightAndWidth.cs" />
+    <Compile Include="Behaviors\NumericTextBox.cs" />
+    <Compile Include="Common\ViewBase.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="Views\AccountPage\AccountPage.xaml.cs">
+      <DependentUpon>AccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddExpence\AddExpence.xaml.cs">
+      <DependentUpon>AddExpence.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddIncome\AddIncome.xaml.cs">
+      <DependentUpon>AddIncome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddMoneyAccount\AddMoneyAccount.xaml.cs">
+      <DependentUpon>AddMoneyAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AddSubcategory\AddSubcategory.xaml.cs">
+      <DependentUpon>AddSubcategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddTransaction\AddTransactionExpense.xaml.cs">
+      <DependentUpon>AddTransactionExpense.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AllExpense\AllExpense.xaml.cs">
+      <DependentUpon>AllExpense.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AllSubcategories\AllSubcategories.xaml.cs">
+      <DependentUpon>AllSubcategories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Alltransactions\Alltransactions.xaml.cs">
+      <DependentUpon>Alltransactions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Alltransactions\ListViewTransactions.xaml.cs">
+      <DependentUpon>ListViewTransactions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\DatePanel.xaml.cs">
+      <DependentUpon>DatePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ExtendedDatePanel.xaml.cs">
+      <DependentUpon>ExtendedDatePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ExtendedTextBoxForNames.cs" />
+    <Compile Include="Views\Controls\MainPanel.xaml.cs">
+      <DependentUpon>MainPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\MyGridView.cs" />
+    <Compile Include="Views\Controls\MyListView.cs" />
+    <Compile Include="Views\Controls\TextBoxForNames.cs" />
+    <Compile Include="Views\EditExpense\EditExpense.xaml.cs">
+      <DependentUpon>EditExpense.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditTransaction\EditTransaction.xaml.cs">
+      <DependentUpon>EditTransaction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LinearExpence\LinearExpence.xaml.cs">
+      <DependentUpon>LinearExpence.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MoneyTransaction\MoneyTransaction.xaml.cs">
+      <DependentUpon>MoneyTransaction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Selectedcategory\SelectedCategoriesLinear.xaml.cs">
+      <DependentUpon>SelectedCategoriesLinear.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Selectedcategory\SelectedCategory.xaml.cs">
+      <DependentUpon>SelectedCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Statistic\Graphic.xaml.cs">
+      <DependentUpon>Graphic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Statistic\Statistic.xaml.cs">
+      <DependentUpon>Statistic.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="BudgetManager.WindowsBudget_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <PRIResource Include="Recources\Strings\en-US\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\backarrow.png" />
+    <Content Include="Assets\bg.png" />
+    <Content Include="Assets\Colors\AquaBlue.jpg" />
+    <Content Include="Assets\Colors\black.jpg" />
+    <Content Include="Assets\Colors\blue.jpg" />
+    <Content Include="Assets\Colors\brown.jpg" />
+    <Content Include="Assets\Colors\gray.jpg" />
+    <Content Include="Assets\Colors\green.jpg" />
+    <Content Include="Assets\Colors\orange.jpg" />
+    <Content Include="Assets\Colors\purple.jpg" />
+    <Content Include="Assets\Colors\red.jpg" />
+    <Content Include="Assets\Colors\violet.jpg" />
+    <Content Include="Assets\icon.png" />
+    <Content Include="Assets\IconAccount\bed.png" />
+    <Content Include="Assets\IconAccount\card.png" />
+    <Content Include="Assets\IconAccount\card1.png" />
+    <Content Include="Assets\IconAccount\credit.png" />
+    <Content Include="Assets\IconAccount\creditcard.png" />
+    <Content Include="Assets\IconAccount\mastercard.png" />
+    <Content Include="Assets\IconAccount\piggy.png" />
+    <Content Include="Assets\IconAccount\wallet.png" />
+    <Content Include="Assets\IconAccount\wallet1.png" />
+    <Content Include="Assets\IconAccount\wallet2.png" />
+    <Content Include="Assets\IconAccount\wallet3.png" />
+    <Content Include="Assets\IconExpense\barber.png" />
+    <Content Include="Assets\IconExpense\bicycle.png" />
+    <Content Include="Assets\IconExpense\cake.png" />
+    <Content Include="Assets\IconExpense\car.png" />
+    <Content Include="Assets\IconExpense\cart.png" />
+    <Content Include="Assets\IconExpense\clothes.png" />
+    <Content Include="Assets\IconExpense\computer.png" />
+    <Content Include="Assets\IconExpense\devices.png" />
+    <Content Include="Assets\IconExpense\dress.png" />
+    <Content Include="Assets\IconExpense\equipment.png" />
+    <Content Include="Assets\IconExpense\gas.png" />
+    <Content Include="Assets\IconExpense\gym.png" />
+    <Content Include="Assets\IconExpense\house.png" />
+    <Content Include="Assets\IconExpense\internet.png" />
+    <Content Include="Assets\IconExpense\jeans.png" />
+    <Content Include="Assets\IconExpense\light.png" />
+    <Content Include="Assets\IconExpense\meal.png" />
+    <Content Include="Assets\IconExpense\medicine.png" />
+    <Content Include="Assets\IconExpense\Newphone.png" />
+    <Content Include="Assets\IconExpense\phone.png" />
+    <Content Include="Assets\IconExpense\plane.png" />
+    <Content Include="Assets\IconExpense\product.png" />
+    <Content Include="Assets\IconExpense\sale.png" />
+    <Content Include="Assets\IconExpense\school.png" />
+    <Content Include="Assets\IconExpense\ticket.png" />
+    <Content Include="Assets\IconExpense\travel.png" />
+    <Content Include="Assets\IconExpense\tv.png" />
+    <Content Include="Assets\IconExpense\water.png" />
+    <Content Include="Assets\IconIncome\bank.png" />
+    <Content Include="Assets\IconIncome\book.png" />
+    <Content Include="Assets\IconIncome\borrow.png" />
+    <Content Include="Assets\IconIncome\family.png" />
+    <Content Include="Assets\IconIncome\iconcoin.png" />
+    <Content Include="Assets\IconIncome\iconmoney.png" />
+    <Content Include="Assets\IconIncome\iconshop.png" />
+    <Content Include="Assets\IconIncome\mall.png" />
+    <Content Include="Assets\IconIncome\present.png" />
+    <Content Include="Assets\IconIncome\salary.png" />
+    <Content Include="Assets\IconIncome\Sale.png" />
+    <Content Include="Assets\IconUser\female.png" />
+    <Content Include="Assets\IconUser\female2.png" />
+    <Content Include="Assets\IconUser\female3.png" />
+    <Content Include="Assets\IconUser\icon.png" />
+    <Content Include="Assets\IconUser\icon1.png" />
+    <Content Include="Assets\IconUser\male2.png" />
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\plus.png" />
+    <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\square150x150Tile-sdk.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Recources\Brushes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Recources\BudgetManagerStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Views\AccountPage\AccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddExpence\AddExpence.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddIncome\AddIncome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddMoneyAccount\AddMoneyAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddSubcategory\AddSubcategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddTransaction\AddTransactionExpense.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AllExpense\AllExpense.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AllSubcategories\AllSubcategories.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Alltransactions\Alltransactions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Alltransactions\ListViewTransactions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\DatePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\ExtendedDatePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\MainPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditExpense\EditExpense.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditTransaction\EditTransaction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LinearExpence\LinearExpence.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainPage\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MoneyTransaction\MoneyTransaction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Selectedcategory\SelectedCategoriesLinear.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Selectedcategory\SelectedCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Statistic\Graphic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Statistic\Statistic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="De.TorstenMandelkow.MetroChart">
+      <HintPath>..\..\packages\ModernChart.1.0.0\lib\netcore45\De.TorstenMandelkow.MetroChart.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\..\packages\MvvmLightLibs.5.1.1.0\lib\windows81\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\..\packages\MvvmLightLibs.5.1.1.0\lib\windows81\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform">
+      <HintPath>..\..\packages\MvvmLightLibs.5.1.1.0\lib\windows81\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL">
+      <HintPath>..\..\packages\SQLitePCL.3.8.7.2\lib\netcore451\SQLitePCL.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreAppLib">
+      <HintPath>..\..\packages\StoreAppLib.1.2.0.0\lib\netcore451\StoreAppLib.dll</HintPath>
+    </Reference>
+    <Reference Include="WinRTXamlToolkit">
+      <HintPath>..\..\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="WinRTXamlToolkit.Controls.Calendar">
+      <HintPath>..\..\packages\WinRTXamlToolkit.Controls.Calendar.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="WinRTXamlToolkit.Controls.DataVisualization">
+      <HintPath>..\..\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
+      <Name>Behaviors SDK %28XAML%29</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.WinRT81, Version=3.8.10.2">
+      <Name>SQLite for Windows Runtime %28Windows 8.1%29</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\BudgetManager.Core\BudgetManager.Core.csproj">
+      <Project>{c120aa82-dce0-4c43-8ad5-4e791814ab41}</Project>
+      <Name>BudgetManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\BudgetManager.DAL\BudgetManager.DAL.csproj">
+      <Project>{60b66bf6-bdd3-45f8-8821-02f844ce44c1}</Project>
+      <Name>BudgetManager.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\BudgetManager.Models\BudgetManager.Models.csproj">
+      <Project>{e8f496f1-5df0-4c42-8aa2-2ec3efba93dc}</Project>
+      <Name>BudgetManager.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\BudgetManager.Shared\BudgetManager.Shared.csproj">
+      <Project>{d4a26b80-5d08-4dcf-8eb7-20a6fb0478d4}</Project>
+      <Name>BudgetManager.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\BudgetManager.WindowsBudget.qps-ploc.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\BudgetManager.WindowsBudget.ru-RU.xlf" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\SQLitePCL.3.8.7.2\build\netcore451\SQLitePCL.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\SQLitePCL.3.8.7.2\build\netcore451\SQLitePCL.props'))" />
+    <Error Condition="!Exists('..\..\packages\SQLitePCL.3.8.7.2\build\netcore451\SQLitePCL.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\SQLitePCL.3.8.7.2\build\netcore451\SQLitePCL.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\SQLitePCL.3.8.7.2\build\netcore451\SQLitePCL.targets" Condition="Exists('..\..\packages\SQLitePCL.3.8.7.2\build\netcore451\SQLitePCL.targets')" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets" Label="MultilingualAppToolkit" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

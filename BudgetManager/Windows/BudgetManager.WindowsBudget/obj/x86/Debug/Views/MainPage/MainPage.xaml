@@ -1,0 +1,809 @@
+﻿<common:ViewBase
+    x:Name="pageRoot"
+    x:Class="BudgetManager.WindowsBudget.Views.MainPage.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BudgetManager.WindowsBudget.Views.MainPage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:controls="using:BudgetManager.WindowsBudget.Views.Controls" 
+    xmlns:VM="using:BudgetManager.Shared"
+    xmlns:Winrt="using:WinRTXamlToolkit.Controls"  
+    xmlns:converter="using:BudgetManager.Core.Converters"
+    xmlns:common="using:BudgetManager.WindowsBudget.Common"
+    DataContext="{Binding Source={StaticResource Locator}, Path=MainPageViewModel}"
+    xmlns:datavis="using:WinRTXamlToolkit.Controls.DataVisualization"  
+    xmlns:charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting" 
+    xmlns:datepicker="using:StoreAppLib.Controls"
+    xmlns:mybehaviors="using:BudgetManager.WindowsBudget.Behaviors" 
+    mc:Ignorable="d">
+    
+    <Page.Resources>
+        <x:String x:Key="AppName">Planning Manager</x:String>       
+        <converter:BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
+        
+        <LinearGradientBrush x:Key="ForPiggy"
+                             EndPoint="0.5,1"
+                             StartPoint="0.5,0">
+            
+            <GradientStop Color=" Gray" 
+                          Offset="{Binding SelectedUser.RestPercent }" />
+            
+            <GradientStop Color="{StaticResource ForRestRectangle}" 
+                          Offset="{Binding SelectedUser.RestPercent }" />
+            
+        </LinearGradientBrush>
+
+        <Style x:Key="MyPiggy"
+               TargetType="ContentControl">
+            
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ContentControl">
+                        <Path Fill="{StaticResource ForPiggy}"  Data="F1M46.295,71.174C41.726,71.174 38.038,74.878 38.038,79.466C38.038,84.054 41.726,87.758 46.295,87.758C50.864,87.758 54.552,84.054 54.552,79.466C54.552,74.878 50.864,71.174 46.295,71.174zM39.128,28.628C47.554,28.604 58.158,29.963 67.378,35.352C69.488,34.818 71.654,34.357 73.837,33.989C73.966,34.339 74.112,34.707 74.259,35.057C75.654,38.374 77.654,41.341 80.186,43.884C80.681,44.381 81.195,44.861 81.727,45.321C79.966,45.487 78.388,45.69 77.085,45.892C74.7,46.261 73.121,48.601 73.69,50.96C73.69,50.96 73.69,50.978 73.69,50.978C74.186,53.06 76.204,54.406 78.314,54.092C85.489,53.005 101.838,51.697 116.481,58.644C118.408,59.565 120.738,58.828 121.802,56.967C123.013,54.866 122.169,52.176 119.986,51.144C117.839,50.131 115.6,49.246 113.27,48.472C115.472,47.238 117.49,45.69 119.288,43.884C120.646,42.52 121.839,41.028 122.885,39.443C130.922,42.834 138.408,47.495 144.867,53.466C155.932,63.674 162.537,77.697 163.785,92.291C164.556,101.338 163.272,110.607 159.73,119.341C152.721,136.589 143.234,153.118 134.5,169.591C133.381,171.692 131.197,173 128.83,173C128.83,173 112.426,173 112.426,173C108.884,173 106.003,170.107 106.003,166.551C106.003,166.551 106.003,158.664 106.003,158.664C100.554,159.714 94.884,160.267 89.049,160.267C85.342,160.267 81.727,160.046 78.168,159.604C78.168,159.604 74.039,169.13 74.039,169.13C73.011,171.471 70.7,173 68.149,173C68.149,173 51.671,173 51.671,173C48.13,173 45.249,170.107 45.249,166.551C45.249,166.551 45.249,148.474 45.249,148.474C31.817,140.421 21.634,128.739 16.716,115.122C16.716,115.122 4.954,108.967 4.954,108.967C3.138,108.009 2,106.129 2,104.066C2,104.066 2,83.649 2,83.649C2,80.59 4.477,78.102 7.523,78.121C7.523,78.121 16.587,78.158 16.587,78.158C20.092,68.299 26.331,59.454 34.588,52.231C34.588,52.231 27.157,36.937 27.157,36.937C25.487,33.473 27.744,29.382 31.56,29.013C33.753,28.797 36.319,28.635 39.128,28.628zM99.746,2C111.967,2 121.894,11.95 121.875,24.241C121.875,29.179 120.279,33.731 117.582,37.416C114.334,41.857 109.471,45.045 103.857,46.095C102.535,46.353 101.159,46.482 99.746,46.482C96.865,46.482 94.113,45.929 91.599,44.934C86.186,42.778 81.801,38.54 79.47,33.196C78.259,30.451 77.599,27.429 77.599,24.241C77.599,11.95 87.507,2 99.746,2z"/>
+                    </ControlTemplate>
+                </Setter.Value>
+                
+            </Setter>
+
+        </Style>
+
+    </Page.Resources>
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto"  VerticalScrollBarVisibility="Disabled">
+
+        <Grid Background="{StaticResource BackgroundBrush}">
+            <Grid.ChildrenTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition/>
+                </TransitionCollection>
+            </Grid.ChildrenTransitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="558*"/>
+                    <ColumnDefinition Width="827*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlock}" VerticalAlignment="Top" Margin="0,50,0,0"/>
+
+                <ComboBox  x:Name="usernameComboBox"
+                           Margin="717,58,0,0" 
+                           Style="{StaticResource UsersTransactionCombobox}"
+                           ItemsSource="{Binding Users}"
+                           SelectedItem="{Binding SelectedUser,Mode=TwoWay}"
+                           Grid.Column="1">
+
+                    <i:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="SelectionChanged">
+                            <core:InvokeCommandAction Command="{Binding SelectionChangedUser}"/>
+                        </core:EventTriggerBehavior>
+                    </i:Interaction.Behaviors>
+
+                </ComboBox>
+
+                <datepicker:DatePicker Background="{StaticResource ForDatepickerBackGround}" 
+                                       Margin="80,65,0,0" 
+                                       Style="{StaticResource CalendarStyle}"
+                                       Date="{Binding ThisDate,Mode=TwoWay}">
+
+                    <i:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="SelectionChanged">
+                            <core:InvokeCommandAction Command="{Binding DateChangeCommand}"/>
+                        </core:EventTriggerBehavior>
+                    </i:Interaction.Behaviors>
+
+                </datepicker:DatePicker>
+
+                <TextBlock Text="-"
+                           FontSize="20"
+                           Grid.Column="1" 
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Center"
+                           Margin="180,65,0,0" 
+                           Foreground="Gray" 
+                           Visibility="{Binding Path = SecondDateVisibility,Mode=TwoWay,
+                           Converter={StaticResource BoolToVisibility}}"/>
+
+                <datepicker:DatePicker Background="{StaticResource ForDatepickerBackGround}" 
+                                       Style="{StaticResource CalendarStyle}" 
+                                       Margin="294,65,0,0" 
+                                       Date="{Binding SecondDate,Mode=TwoWay}"
+                                       Visibility="{Binding Path = SecondDateVisibility,Mode=TwoWay,
+                                       Converter={StaticResource BoolToVisibility}}">
+
+                    <i:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="SelectionChanged">
+                            <core:InvokeCommandAction Command="{Binding SecondDateChangeCommand}"/>
+                        </core:EventTriggerBehavior>
+                    </i:Interaction.Behaviors>
+
+                </datepicker:DatePicker>
+
+            </Grid>
+
+            <StackPanel Margin="0,140,0,0"
+                        Grid.RowSpan="2">
+
+                <StackPanel Orientation="Horizontal" 
+                            Margin="27,0,0,0">
+
+                    <RadioButton x:Uid="daytitle"
+                                 Command="{Binding DayCommand}" 
+                                 Style="{StaticResource TextBlockButtonStyle1}"
+                                 Margin="20,0,0,0"/>
+
+                    <RadioButton x:Uid="weektitle"
+                                 Command="{Binding WeekCommand}" 
+                                 Style="{StaticResource TextBlockButtonStyle1}"
+                                 Margin="20,0,0,0"/>
+
+                    <RadioButton x:Uid="monthtitle"
+                                 Command="{Binding MonthCommand}"
+                                 Style="{StaticResource TextBlockButtonStyle1}"
+                                 IsChecked="True"
+                                 Margin="20,0,0,0"/>
+
+                    <RadioButton x:Uid="yeartitle"
+                                 Command="{Binding YearCommand}" 
+                                 Style="{StaticResource TextBlockButtonStyle1}"
+                                 Margin="20,0,0,0"/>
+
+                    <RadioButton x:Uid="periodtitle"
+                                 Command="{Binding PeriodCommand}" 
+                                 Style="{StaticResource TextBlockButtonStyle1}"
+                                 Margin="20,0,0,0"/>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Button Style="{StaticResource TextBlockButtonStyle}"
+                            Command="{Binding AccountCommand}">
+
+                        <TextBlock x:Uid="MoneyAccountMainTitle"
+                                   Width="270"
+                                   Margin="48,0,0,0" 
+                                   Style="{StaticResource HeaderTextBlockStyle}" 
+                                   FontSize="40"
+                                   Foreground="{StaticResource ForMainText}"/>
+
+                    </Button>
+
+                    <Button Style="{StaticResource TextBlockButtonStyle}" 
+                            Command="{Binding IncomeCommand}"
+                            Margin="10,0,0,0">
+
+                        <TextBlock x:Uid="IncomeMainTitle"
+                                   Style="{StaticResource HeaderTextBlockStyle}"
+                                   FontSize="40"
+                                   Width="270"
+                                   Foreground="{StaticResource ForMainText}"/>
+
+                    </Button>
+
+                    <Button Style="{StaticResource TextBlockButtonStyle}" 
+                            Command="{Binding ExpenseCommand}">
+
+                        <TextBlock x:Uid="expensesMainTitle"
+                                   Width="220"
+                                   Style="{StaticResource HeaderTextBlockStyle}"  
+                                   Foreground="{StaticResource ForMainText}"
+                                   FontSize="40"/>
+
+                    </Button>
+
+                    <Button Style="{StaticResource TextBlockButtonStyle}"
+                            Command="{Binding AllTransactionCommand}">
+
+                        <TextBlock x:Uid="trasnationsMainTitle"
+                                   FontSize="40"
+                                   Margin="5,0,0,0"
+                                   Width="305"
+                                   Style="{StaticResource HeaderTextBlockStyle}" 
+                                   Foreground="{StaticResource ForMainText}" />
+
+                    </Button>
+
+                    <Button Style="{StaticResource TextBlockButtonStyle}">
+
+                        <TextBlock x:Uid="StatisticMainTitle"
+                                       Style="{StaticResource HeaderTextBlockStyle}" 
+                                       FontSize="40"
+                                       Width="460"
+                                       Foreground="{StaticResource ForMainText}"/>
+
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Click">
+                                <core:NavigateToPageAction TargetPage="BudgetManager.WindowsBudget.Views.Statistic.Statistic"/>
+                            </core:EventTriggerBehavior>
+                        </i:Interaction.Behaviors>
+
+                    </Button>
+
+                    <TextBlock x:Uid="restTextBlock"
+                                   Style="{StaticResource HeaderTextBlockStyle}"
+                                   Width="300"
+                                   FontSize="40"
+                                   Foreground="{StaticResource ForMainText}"/>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <StackPanel Orientation="Vertical">
+
+                        <Button Style="{StaticResource AddButtonEllipseStyle}"
+                                    Margin="48,20,90,0" 
+                                    Command="{Binding AddMoneyAccountCommand}"/>
+
+                        <TextBlock x:Uid="addtitle"
+                                       Style="{StaticResource AddTextBlockStyle}"                                     
+                                       Margin="-40,0,0,0"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="7,0,0,0">
+
+                        <Button  Style="{StaticResource AddButtonEllipseStyle}"
+                                     Command="{Binding  AddIncomeCommand}"
+                                     Margin="110,20,90,0" />
+
+                        <TextBlock x:Uid="addtitle"
+                                       Style="{StaticResource AddTextBlockStyle}"
+                                       Margin="20,0,0,0"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="-5,0,0,0">
+
+                        <Button  Style="{StaticResource AddButtonEllipseStyle}"                                    
+                                     Margin="100,20,90,0" >
+
+                            <i:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="Click">
+                                    <core:NavigateToPageAction TargetPage="BudgetManager.WindowsBudget.Views.AddExpence.AddExpence"/>
+                                </core:EventTriggerBehavior>
+                            </i:Interaction.Behaviors>
+
+                        </Button>
+
+                        <TextBlock x:Uid="addtitle"
+                                       Margin="10,0,0,0"
+                                       Style="{StaticResource AddTextBlockStyle}" />
+
+                    </StackPanel>
+
+                    <Button x:Uid="addtransaction"
+                                Style="{StaticResource AddTransactionStyle}" 
+                                Command="{Binding AddTransactionCommand}"
+                                Width="305" Margin="23,0,0,0"/>
+
+                    <Rectangle Width="456" 
+                               Height="50"
+                               Margin="6,0,0,0" />
+
+                    <Grid Visibility="{Binding Path = SelectedUser.Visibility,Mode=TwoWay, 
+                          Converter={StaticResource BoolToVisibility}}">
+
+                        <Rectangle Width="300" Height="50">
+
+                            <Rectangle.Fill>
+
+                                <LinearGradientBrush StartPoint="1,0" 
+                                                     EndPoint="0,0" >
+
+                                    <GradientStop Color="{StaticResource ForIncomeRectangle}" 
+                                                  Offset="{Binding Percent}"/>
+
+                                    <GradientStop Color="Gray"
+                                                      Offset="{Binding Percent}"/>
+
+                                </LinearGradientBrush>
+
+                            </Rectangle.Fill>
+
+                        </Rectangle>
+
+                        <TextBlock Text="Доходы" 
+                                   x:Uid="IncomeTitle"
+                                   FontSize="20"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"/>
+                    </Grid>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <GridView  x:Name="gvMain"
+                               Grid.Row="2" 
+                               Margin="48,-15,0,0" 
+                               Width="198"
+                               ItemsSource="{Binding Path= SelectedUser.Categoriesaccount}" 
+                               SelectedItem="{Binding SelectedCategory,Mode=TwoWay}"
+                               ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                               Style="{StaticResource accountGridView}">
+
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="SelectionChanged">
+                                <core:InvokeCommandAction Command="{Binding SelectedItemAccount}"/>
+                            </core:EventTriggerBehavior>
+                            <core:EventTriggerBehavior EventName="GotFocus">
+                                <core:InvokeCommandAction Command="{Binding GotFocusOnAccount}"/>
+                            </core:EventTriggerBehavior>
+                            <mybehaviors:GridViewHeight/>
+                        </i:Interaction.Behaviors>
+                        
+                    </GridView>
+
+                    <GridView  x:Name="gvincome" 
+                               Style="{StaticResource incomeGridView}"
+                               Width="198"
+                               Margin="98,-15,0,0"
+                               ItemsSource="{Binding Path= SelectedUser.Categoriesincome}"
+                               SelectedItem="{Binding SelectedCategory,Mode=TwoWay}"
+                               ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                               SelectedIndex="{Binding SelectedIndex}">
+
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="SelectionChanged">
+                                <core:InvokeCommandAction Command="{Binding SelectedItemIncome}"/>
+                            </core:EventTriggerBehavior>
+                            <core:EventTriggerBehavior EventName="GotFocus">
+                                <core:InvokeCommandAction Command="{Binding GotFocusOnIncome}"/>
+                            </core:EventTriggerBehavior>
+                            <mybehaviors:GridViewHeight/>
+                        </i:Interaction.Behaviors>
+
+                    </GridView>
+
+                    <GridView  x:Name="gvexpense" 
+                               Style="{StaticResource MainExpenseGridView}"
+                               Margin="75,0,0,0"
+                               Width="198"
+                               ItemsSource="{Binding Path= SelectedUser.Categoriesexpense}"
+                               ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                               SelectedItem="{Binding SelectedCategory,Mode=TwoWay}" >
+
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="SelectionChanged">
+                                <core:InvokeCommandAction Command="{Binding SelectedItemExpense}"/>
+                            </core:EventTriggerBehavior>
+                            <core:EventTriggerBehavior EventName="GotFocus">
+                                <core:InvokeCommandAction Command="{Binding GotFocusOnExpense}"/>
+                            </core:EventTriggerBehavior>
+                            <mybehaviors:GridViewHeight/>
+                        </i:Interaction.Behaviors>
+
+                    </GridView>
+
+                    <controls:MyGridView  x:Name="gvetrans" 
+                                          Grid.Row="3"   
+                                          Width="306"
+                                          Margin="4,-40,0,0"
+                                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                          ItemsSource="{Binding Path= SelectedUser.Transactions}"      
+                                          SelectionMode="Multiple"
+                                          Style="{StaticResource MainAllTransactionsGridView}"
+                                          BindableSelectedItems="{Binding SelectedTransactions}" >
+
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="LostFocus">
+                                <core:InvokeCommandAction Command="{Binding SelectedItemTransaction}"/>
+                            </core:EventTriggerBehavior>
+                            <core:EventTriggerBehavior EventName="GotFocus">
+                                <core:InvokeCommandAction Command="{Binding GotFocusOnTransaction}"/>
+                            </core:EventTriggerBehavior>
+                            <mybehaviors:GridViewHeight/>
+                        </i:Interaction.Behaviors>
+
+                    </controls:MyGridView>
+
+
+                    <StackPanel Orientation="Vertical"
+                                    Margin="30,-120,0,101" 
+                                    Visibility="{Binding Path = SelectedUser.Visibility,Mode=TwoWay,
+                                    Converter={StaticResource BoolToVisibility}}">
+
+                        <Grid>
+
+                            <charting:Chart x:Name="PieChart" 
+                                            Width="387"
+                                            Height="380" 
+                                            VerticalAlignment="Top" 
+                                            HorizontalAlignment="Center"
+                                            Visibility="{Binding Path = SelectedUser.Visibility,Mode=TwoWay,
+                                            Converter={StaticResource BoolToVisibility}}">
+
+                                <charting:Chart.Palette>
+                                    <charting:ResourceDictionaryCollection>
+
+                                        <ResourceDictionary>
+                                            <SolidColorBrush x:Key="ForIncomeChart"  Color="#5200E1" />
+                                            <Style x:Key="DataPointStyle" TargetType="Control">
+                                                <Setter Property="Background" Value="{StaticResource ForIncomeChart}" />
+                                            </Style>
+                                        </ResourceDictionary>
+
+                                        <ResourceDictionary>
+                                            <SolidColorBrush x:Key="ForExpenseChart"  Color="#F20E57" />
+                                            <Style x:Key="DataPointStyle" TargetType="Control">
+                                                <Setter Property="Background" Value="{StaticResource ForExpenseChart}" />
+                                            </Style>
+                                        </ResourceDictionary>
+
+                                    </charting:ResourceDictionaryCollection>
+                                </charting:Chart.Palette>
+
+                                <charting:Chart.LegendStyle>
+
+                                    <Style TargetType="datavis:Legend">
+                                        <Setter Property="Width" Value="0"/>
+                                        <Setter Property="Height" Value="0"/>
+                                    </Style>
+
+                                </charting:Chart.LegendStyle>
+                                <charting:Chart.Series>
+
+                                    <charting:PieSeries
+                                        Title="All user`s balans"
+                                        ItemsSource="{Binding Path=StatisticCategories}"  
+                                        IndependentValueBinding="{Binding Name}"
+                                        DependentValueBinding="{Binding StatisticType}"
+                                        IsSelectionEnabled="False" />
+
+                                </charting:Chart.Series>
+
+                            </charting:Chart>
+
+                            <Grid HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center"
+                                  Margin="0,20,0,0">
+
+                                <Ellipse Fill="Gray"
+                                             Width="277"
+                                             Height="277"
+                                             Opacity=".6"
+                                             Visibility="{Binding Path = AllBudgetVisibility,Mode=TwoWay,
+                                             Converter={StaticResource BoolToVisibility}}"/>
+
+                                <Ellipse Fill="Black"
+                                             Width="150" 
+                                             Height="150"
+                                             Opacity=".2"/>
+
+                                <Ellipse Fill="{StaticResource ForChartBackGround}"
+                                             Width="130" 
+                                             Height="130"/>
+
+                            </Grid>
+
+                        </Grid>
+
+                        <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center" 
+                                        Margin="-20,0,0,0">
+
+                            <StackPanel Orientation="Vertical" 
+                                            HorizontalAlignment="Center" >
+
+                                <StackPanel Orientation="Horizontal"
+                                                Margin="0,-20,0,0" >
+
+                                    <Grid>
+
+                                        <Ellipse Fill="{StaticResource ForExpenseChart}" 
+                                                     Stretch="UniformToFill" 
+                                                     Height="50"
+                                                     Width="50" />
+
+                                        <ContentControl Style="{StaticResource ExpenseArrow}"  
+                                                            Width="25" 
+                                                            Height="25"/>
+
+                                    </Grid>
+
+                                    <TextBlock x:Uid="ExpensesTitle"
+                                                   Margin="20,12,0,0"
+                                                   Width="100" 
+                                                   FontSize="20" 
+                                                   Foreground="#5B5B5B"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" 
+                                                Margin="0,20,0,0" >
+
+                                    <Grid >
+
+                                        <Ellipse Fill="{StaticResource ForIncomeChart}"
+                                                     Stretch="UniformToFill"
+                                                     Height="50"
+                                                     Width="50" />
+
+                                        <ContentControl Style="{StaticResource IncomeArrow}"  
+                                                            Width="25"
+                                                            Height="25"/>
+
+                                    </Grid>
+
+                                    <TextBlock x:Uid="IncomeTitle"
+                                                   Margin="20,12,0,0" 
+                                                   Width="100" 
+                                                   FontSize="20" 
+                                                   Foreground="#5B5B5B"/>
+
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical"
+                                            HorizontalAlignment="Center" >
+
+                                <StackPanel Orientation="Horizontal"
+                                                Margin="0,-20,0,0">
+
+                                    <TextBlock Text="$"
+                                                   Margin="0,12,0,0"
+                                                   FontSize="20"
+                                                   Foreground="{StaticResource ForExpenseChart}"/>
+
+                                    <TextBlock Text="{Binding Path = SelectedUser.Expense}"
+                                                   Margin="0,12,0,0" 
+                                                   FontSize="20" 
+                                                   Foreground="{StaticResource ForExpenseChart}"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal"
+                                                Margin="0,35,0,0">
+
+                                    <TextBlock Text="$" 
+                                                   Margin="0,12,0,0"
+                                                   FontSize="20" 
+                                                   Foreground="{StaticResource ForIncomeChart}"/>
+
+                                    <TextBlock Text="{Binding Path = SelectedUser.Income}" 
+                                                   Margin="0,12,0,0"
+                                                   FontSize="20" 
+                                                   Foreground="{StaticResource ForIncomeChart}"/>
+
+                                </StackPanel>
+
+                            </StackPanel>
+
+                        </StackPanel>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical"
+                                Margin="50,-40,0,0"
+                                Visibility="{Binding Path = SelectedUser.Visibility,Mode=TwoWay,
+                                Converter={StaticResource BoolToVisibility}}">
+
+                        <StackPanel VerticalAlignment="Top"
+                                    HorizontalAlignment="Right"
+                                    Margin="-4,0,0,0">
+
+                            <Grid>
+
+                                <Rectangle Width="300" 
+                                           Height="50" 
+                                           Margin="0,10,0,0">
+
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush StartPoint="1,0" 
+                                                             EndPoint="0,0" >
+
+                                            <GradientStop Color="Gray"
+                                                          Offset="{Binding Path = SelectedUser.RestPercent}"/>
+
+                                            <GradientStop Color="{StaticResource ForRestRectangle}"
+                                                          Offset="{Binding Path=  SelectedUser.RestPercent}"/>
+
+                                        </LinearGradientBrush>
+
+                                    </Rectangle.Fill>
+
+                                </Rectangle>
+
+                                <TextBlock x:Uid="restTextBlock"
+                                           FontSize="20" 
+                                           HorizontalAlignment="Left"
+                                           VerticalAlignment="Center" 
+                                           Margin="0,10,0,0"/>
+                            </Grid>
+
+                            <Grid >
+
+                                <Rectangle Width="300"
+                                           Height="50" 
+                                           Margin="1,10,0,0" >
+
+                                    <Rectangle.Fill>
+
+                                        <LinearGradientBrush StartPoint="1,0"
+                                                             EndPoint="0,0" >
+
+                                            <GradientStop Color="Gray"
+                                                          Offset="{Binding Path =  SelectedUser.ExpensePercent}"/>
+                                            
+                                            <GradientStop Color="{StaticResource ForExpenseRectangle}"
+                                                          Offset="{Binding Path=  SelectedUser.ExpensePercent}"/>
+
+                                        </LinearGradientBrush>
+
+                                    </Rectangle.Fill>
+
+                                </Rectangle>
+
+                                <TextBlock FontSize="20"
+                                           x:Uid="ExpensesTitle"
+                                           HorizontalAlignment="Left" 
+                                           VerticalAlignment="Center"
+                                           Margin="0,10,0,0"/>
+
+                            </Grid>
+
+                        </StackPanel>
+
+                        <ContentControl Style="{StaticResource MyPiggy}" 
+                                        HorizontalAlignment="Center"
+                                        Margin="0,50,0,0"/>
+
+                        <StackPanel Orientation="Horizontal" 
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,20,0,0">
+
+                            <TextBlock Text="$" 
+                                           Style="{StaticResource RestTextBlock}"/>
+
+                            <TextBlock Text="{Binding Path= SelectedUser.Rest,Mode=TwoWay}"       
+                                       Style="{StaticResource RestTextBlock}" 
+                                       Margin="10,0,0,0"/>
+
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </StackPanel>
+
+            </StackPanel>
+          
+        </Grid>
+    </ScrollViewer>
+    
+    <Page.BottomAppBar>
+        
+        <AppBar x:Name="bottomAppBar" 
+                Padding="10,0,10,0"
+                Background="{StaticResource ForAppBarBrush}">
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Orientation="Horizontal">
+                    
+                    <AppBarButton Name="accpage"
+                                  x:Uid="accountpage"
+                                  Icon="Contact" 
+                                  Visibility="{Binding Chosen,Mode=TwoWay, 
+                                  Converter={StaticResource BoolToVisibility}}">
+
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Click">
+                                <core:NavigateToPageAction TargetPage="BudgetManager.WindowsBudget.Views.AccountPage.AccountPage"/>
+                            </core:EventTriggerBehavior>
+                        </i:Interaction.Behaviors>
+                    </AppBarButton>
+
+                        <AppBarButton Name="editexpense"
+                                  x:Uid="editexpense"
+                                  Icon="Edit" 
+                                  Visibility="{Binding Unchosen,Mode=TwoWay,
+                                  Converter={StaticResource BoolToVisibility}}"
+                                  Command="{Binding EditExpenseCommand}"/>
+
+                    <AppBarButton Name="editincome"
+                                  x:Uid="editincome"
+                                  Icon="Edit"  
+                                  Visibility="{Binding Unchosenincome,Mode=TwoWay, 
+                                  Converter={StaticResource BoolToVisibility}}"
+                                  Command="{Binding  EditIncomeCommand}"/>
+                    
+                    <AppBarButton Name="editaccount"
+                                  x:Uid="editaccount"
+                                  Icon="Edit"  
+                                  Visibility="{Binding Unchosenaccount,Mode=TwoWay,
+                                  Converter={StaticResource BoolToVisibility}}" 
+                                  Command="{Binding EditMoneyAccountCommand}"/>
+                    
+                    <AppBarButton Name="edittrans"
+                                  x:Uid="edittransaction"
+                                  Icon="Edit"  
+                                  Visibility="{Binding Unchosentrans,Mode=TwoWay,
+                                  Converter={StaticResource BoolToVisibility}}"
+                                  IsEnabled="{Binding Enable}" 
+                                  Command="{Binding EditTransactionCommand}"/>
+
+
+                    <AppBarButton Name="delete" 
+                                  x:Uid="delete"
+                                  Command="{Binding DeleteCommand}" 
+                                  Visibility="{Binding Deletevisibility,Mode=TwoWay,
+                                  Converter={StaticResource BoolToVisibility}}" >
+                        
+                        <FontIcon Glyph="&#xe106;"
+                                  FontFamily="Segoe UI Symbol" 
+                                  Margin="0,2,0,0"/>
+                        
+                    </AppBarButton>
+
+                    <AppBarButton Name="deletetrans"
+                                  x:Uid="delete"
+                                  Command="{Binding DeleteTransactionCommand}"                                  
+                                  Visibility="{Binding Unchosentrans,Mode=TwoWay,
+                                  Converter={StaticResource BoolToVisibility}}" >
+                        
+                        <AppBarButton.Icon>
+                            
+                            <FontIcon Glyph="&#xe106;"
+                                      FontFamily="Segoe UI Symbol" 
+                                      Margin="0,2,0,0"/>
+                            
+                            </AppBarButton.Icon>
+                        
+                    </AppBarButton>
+
+                </StackPanel>
+                
+                <StackPanel Grid.Column="1"
+                            
+                    HorizontalAlignment="Right" Orientation="Horizontal">
+                    
+                    <AppBarButton Name="addacc" 
+                                  x:Uid="addaccount"
+                                  Style="{StaticResource AddAccButtonStyle}"   
+                                  Command="{Binding AddMoneyAccountCommand}"/>
+                    
+                    <AppBarButton Name="addexpense"
+                                  x:Uid="addexpense"
+                                  Style="{StaticResource AddExpenseButtonStyle}">
+                        
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Click">
+                                <core:NavigateToPageAction TargetPage="BudgetManager.WindowsBudget.Views.AddExpence.AddExpence"/>
+                            </core:EventTriggerBehavior>
+                        </i:Interaction.Behaviors>
+                        
+                    </AppBarButton>
+                    
+                    <AppBarButton Name="addincome"
+                                  x:Uid="addincome"
+                                  Style="{StaticResource AddIncomeButtonStyle}"                                  
+                                  Command="{Binding  AddIncomeCommand}"/>
+                    
+                    <AppBarButton Name="addtrans"
+                                  x:Uid="addtransactionAppbar"
+                                  Style="{StaticResource AddTransactionButtonStyle}"
+                                  Command="{Binding AddTransactionCommand}"/>
+                    
+                </StackPanel>
+            </Grid>
+        </AppBar>
+
+    </Page.BottomAppBar>
+
+</common:ViewBase>
+

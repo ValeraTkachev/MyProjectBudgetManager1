@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="ru-RU" original="BudgetManager.WindowsBudget_Multilingual.prilog.xml" tool-id="MultilingualAppToolkit" product-name="BudgetManager.WindowsBudget" product-version="1.0.0.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="3.1.1250.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resources">
+        <trans-unit id="Resources\SmallLetterIncome\Text" translate="yes" xml:space="preserve">
+          <source>income</source>
+          <target state="new">income</target>
+        </trans-unit>
+        <trans-unit id="Resources\SmallLetterExpense\Text" translate="yes" xml:space="preserve">
+          <source>expense</source>
+          <target state="new">expense</target>
+        </trans-unit>
+        <trans-unit id="Resources\ExpensesTitleForCategory" translate="yes" xml:space="preserve">
+          <source>Expenses</source>
+          <target state="translated">Расходы</target>
+        </trans-unit>
+        <trans-unit id="Resources\WarningGoToAllSubcategories" translate="yes" xml:space="preserve">
+          <source>For viewing subcategories for this expense you should choose it, than press on button.</source>
+          <target state="needs-review-translation">Для просмотра подкатегорий для этого расхода следует выбрать его прежде, чем нажать на кнопку.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note></trans-unit>
+        <trans-unit id="Resources\WarningAddMessage" translate="yes" xml:space="preserve">
+          <source>For adding new item, you should fill all fields.</source>
+          <target state="needs-review-translation">Для добавления нового элемента, следует заполнить все поля.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note></trans-unit>
+        <trans-unit id="Resources\WarningAddTitle" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="translated">Предупреждение</target>
+        </trans-unit>
+        <trans-unit id="Resources\WarningMessageTransaction" translate="yes" xml:space="preserve">
+          <source>Limit your planned expenses in case you add a transaction will be exceeded. If you still want to add another transaction, click continue. If you want to cancel adding another transaction, click Cancel.</source>
+          <target state="translated">Лимит запланированных Вами расходов в случае добавлении транзакции будет превышен. Если вы все-равно хотите добавить еще транзакцию нажмите Продолжить. Если вы хотите отменить добавление еще одной транзакции, нажмите Отменить.</target>
+        </trans-unit>
+        <trans-unit id="Resources\WarningMessageSubcategory" translate="yes" xml:space="preserve">
+          <source>Limit your expenditure planned for this category in the case of adding another flow rate is exceeded. If you want still want to add another expense, click continue. If you want to cancel the add, click Cancel.</source>
+          <target state="translated">Лимит запланированных Вами расходов для данной категории в случае добавления еще одного расхода будет превышен. Если вы хотите все-равно хотите добавить еще один расход нажмите Продолжить. Если вы хотите отменить добавление , нажмите Отменить.</target>
+        </trans-unit>
+        <trans-unit id="Resources\TitleMessageSubcategory" translate="yes" xml:space="preserve">
+          <source>Planned spending limit is exceeded</source>
+          <target state="translated">Лимит запланированных  расходов превышен</target>
+        </trans-unit>
+        <trans-unit id="Resources\CultureInfo" translate="yes" xml:space="preserve">
+          <source>en</source>
+          <target state="translated" state-qualifier="tm-suggestion">ru</target>
+        </trans-unit>
+        <trans-unit id="Resources\Continue" translate="yes" xml:space="preserve">
+          <source>Continue</source>
+          <target state="translated" state-qualifier="tm-suggestion">Продолжить</target>
+        </trans-unit>
+        <trans-unit id="Resources\Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated" state-qualifier="tm-suggestion">Отмена</target>
+        </trans-unit>
+        <trans-unit id="Resources\AllUsers" translate="yes" xml:space="preserve">
+          <source>All Users</source>
+          <target state="translated" state-qualifier="tm-suggestion">Все пользователи</target>
+        </trans-unit>
+        <trans-unit id="Resources\AllTransactions" translate="yes" xml:space="preserve">
+          <source>All Transactions</source>
+          <target state="translated" state-qualifier="tm-suggestion">Все транзакции</target>
+        </trans-unit>
+        <trans-unit id="Resources\AllCategories" translate="yes" xml:space="preserve">
+          <source>All Categories</source>
+          <target state="translated" state-qualifier="tm-suggestion">Все категории</target>
+        </trans-unit>
+        <trans-unit id="Resources\SenderAccount\Text" translate="yes" xml:space="preserve">
+          <source>From what account</source>
+          <target state="translated">С какого аккаунта</target>
+        </trans-unit>
+        <trans-unit id="Resources\onAccount\Text" translate="yes" xml:space="preserve">
+          <source>On whose account</source>
+          <target state="translated">На чей аккаунт</target>
+        </trans-unit>
+        <trans-unit id="Resources\moneytransactionTitle" translate="yes" xml:space="preserve">
+          <source>Funds Transaction</source>
+          <target state="new">Funds Transaction</target>
+        </trans-unit>
+        <trans-unit id="Resources\fromMoneyAccount\Text" translate="yes" xml:space="preserve">
+          <source>From account</source>
+          <target state="translated">Со счета</target>
+        </trans-unit>
+        <trans-unit id="Resources\categories\Content" translate="yes" xml:space="preserve">
+          <source>by categories</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">по категориям</target>
+        </trans-unit>
+        <trans-unit id="Resources\cash\Content" translate="yes" xml:space="preserve">
+          <source>cash flow</source>
+          <target state="translated">денежный поток</target>
+        </trans-unit>
+        <trans-unit id="Resources\balance\Text" translate="yes" xml:space="preserve">
+          <source>Balance</source>
+          <target state="translated">Баланс</target>
+        </trans-unit>
+        <trans-unit id="Resources\addexpenseButton\Content" translate="yes" xml:space="preserve">
+          <source>Add expense</source>
+          <target state="translated">Добавить расход</target>
+        </trans-unit>
+        <trans-unit id="Resources\yeartitle\Content" translate="yes" xml:space="preserve">
+          <source>year</source>
+          <target state="translated">год</target>
+        </trans-unit>
+        <trans-unit id="Resources\weektitle\Content" translate="yes" xml:space="preserve">
+          <source>week</source>
+          <target state="translated" state-qualifier="tm-suggestion">неделя</target>
+        </trans-unit>
+        <trans-unit id="Resources\trasnationsMainTitle\Text" translate="yes" xml:space="preserve">
+          <source>Transactions&gt;</source>
+          <target state="translated">Транзакции&gt;</target>
+        </trans-unit>
+        <trans-unit id="Resources\transactionTitle" translate="yes" xml:space="preserve">
+          <source>Transactions</source>
+          <target state="new">Transactions</target>
+        </trans-unit>
+        <trans-unit id="Resources\StatisticMainTitle\Text" translate="yes" xml:space="preserve">
+          <source>Statistics&gt;</source>
+          <target state="translated">Статистика&gt;</target>
+        </trans-unit>
+        <trans-unit id="Resources\statiscticTitle" translate="yes" xml:space="preserve">
+          <source>Statistics</source>
+          <target state="new">Statistics</target>
+        </trans-unit>
+        <trans-unit id="Resources\spent\Text" translate="yes" xml:space="preserve">
+          <source>spent:</source>
+          <target state="translated">потрачено:</target>
+        </trans-unit>
+        <trans-unit id="Resources\sort\Label" translate="yes" xml:space="preserve">
+          <source>Sorting</source>
+          <target state="translated">Сортировка</target>
+        </trans-unit>
+        <trans-unit id="Resources\sendingButton\Content" translate="yes" xml:space="preserve">
+          <source>transfer</source>
+          <target state="translated">перевод</target>
+        </trans-unit>
+        <trans-unit id="Resources\saveButton\Content" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="translated">Сохранить</target>
+        </trans-unit>
+        <trans-unit id="Resources\restTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Rest</source>
+          <target state="translated">Остаток</target>
+        </trans-unit>
+        <trans-unit id="Resources\plannedTitle\Text" translate="yes" xml:space="preserve">
+          <source>planned expenses</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">запланированные расходы</target>
+        </trans-unit>
+        <trans-unit id="Resources\plan\Text" translate="yes" xml:space="preserve">
+          <source>plan</source>
+          <target state="translated">запланировать</target>
+        </trans-unit>
+        <trans-unit id="Resources\periodtitle\Content" translate="yes" xml:space="preserve">
+          <source>period</source>
+          <target state="translated">период</target>
+        </trans-unit>
+        <trans-unit id="Resources\paymentAppbar\Label" translate="yes" xml:space="preserve">
+          <source>Transfer</source>
+          <target state="translated">осуществить перевод</target>
+        </trans-unit>
+        <trans-unit id="Resources\onMoneyAccountTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>On the account</source>
+          <target state="translated">На счет</target>
+        </trans-unit>
+        <trans-unit id="Resources\monthtitle\Content" translate="yes" xml:space="preserve">
+          <source>month</source>
+          <target state="translated">месяц</target>
+        </trans-unit>
+        <trans-unit id="Resources\moneyAccountTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Account</source>
+          <target state="translated">Счет</target>
+        </trans-unit>
+        <trans-unit id="Resources\MoneyAccountsTitle" translate="yes" xml:space="preserve">
+          <source>Accounts</source>
+          <target state="new">Accounts</target>
+        </trans-unit>
+        <trans-unit id="Resources\MoneyAccountMainTitle\Text" translate="yes" xml:space="preserve">
+          <source>Accounts&gt;</source>
+          <target state="translated">Счета&gt;</target>
+        </trans-unit>
+        <trans-unit id="Resources\miniincomeTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Income</source>
+          <target state="translated" state-qualifier="tm-suggestion">Доход</target>
+        </trans-unit>
+        <trans-unit id="Resources\message\Text" translate="yes" xml:space="preserve">
+          <source>You haven't spent anything yet...</source>
+          <target state="translated">Вы еще ничего не потратили...</target>
+        </trans-unit>
+        <trans-unit id="Resources\IncomeTitle" translate="yes" xml:space="preserve">
+          <source>Incomes</source>
+          <target state="new">Incomes</target>
+        </trans-unit>
+        <trans-unit id="Resources\incomeTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Income</source>
+          <target state="translated" state-qualifier="tm-suggestion">Доход</target>
+        </trans-unit>
+        <trans-unit id="Resources\IncomeMainTitle\Text" translate="yes" xml:space="preserve">
+          <source>Incomes&gt;</source>
+          <target state="translated">Доходы&gt;</target>
+        </trans-unit>
+        <trans-unit id="Resources\incomeButton\Content" translate="yes" xml:space="preserve">
+          <source>income</source>
+          <target state="translated">доход</target>
+        </trans-unit>
+        <trans-unit id="Resources\group\Label" translate="yes" xml:space="preserve">
+          <source>Grouping</source>
+          <target state="translated">Сгруппировать</target>
+        </trans-unit>
+        <trans-unit id="Resources\expenseTitle" translate="yes" xml:space="preserve">
+          <source>Plan expense</source>
+          <target state="new">Plan expense</target>
+        </trans-unit>
+        <trans-unit id="Resources\expenseTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Expense</source>
+          <target state="new">Expense</target>
+        </trans-unit>
+        <trans-unit id="Resources\ExpensesTitle" translate="yes" xml:space="preserve">
+          <source>Expenses</source>
+          <target state="new">Expenses</target>
+        </trans-unit>
+        <trans-unit id="Resources\expensesMessage\Text" translate="yes" xml:space="preserve">
+          <source>Expenses $0</source>
+          <target state="translated">Расходы $0</target>
+        </trans-unit>
+        <trans-unit id="Resources\expensesMainTitle\Text" translate="yes" xml:space="preserve">
+          <source>Expenses&gt;</source>
+          <target state="translated">Расходы&gt;</target>
+        </trans-unit>
+        <trans-unit id="Resources\expenseButton\Content" translate="yes" xml:space="preserve">
+          <source>expense</source>
+          <target state="translated" state-qualifier="tm-suggestion">расход</target>
+        </trans-unit>
+        <trans-unit id="Resources\editTransactionTitle" translate="yes" xml:space="preserve">
+          <source>Edit transaction</source>
+          <target state="new">Edit transaction</target>
+        </trans-unit>
+        <trans-unit id="Resources\edittransaction\Label" translate="yes" xml:space="preserve">
+          <source>Edit transaction</source>
+          <target state="translated">Редактировать транзакцию</target>
+        </trans-unit>
+        <trans-unit id="Resources\editincome\Label" translate="yes" xml:space="preserve">
+          <source>Edit income</source>
+          <target state="translated">Редактировать доход</target>
+        </trans-unit>
+        <trans-unit id="Resources\editexpenseTitle" translate="yes" xml:space="preserve">
+          <source>Edit expense</source>
+          <target state="new">Edit expense</target>
+        </trans-unit>
+        <trans-unit id="Resources\editexpense\Label" translate="yes" xml:space="preserve">
+          <source>Edit expense</source>
+          <target state="translated">Редактировать расход</target>
+        </trans-unit>
+        <trans-unit id="Resources\editaccount\Label" translate="yes" xml:space="preserve">
+          <source>Edit account</source>
+          <target state="translated">Редактировать счет</target>
+        </trans-unit>
+        <trans-unit id="Resources\edit\Label" translate="yes" xml:space="preserve">
+          <source>edit</source>
+          <target state="translated">редактировать</target>
+        </trans-unit>
+        <trans-unit id="Resources\delete\Label" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated" state-qualifier="tm-suggestion">удалить</target>
+        </trans-unit>
+        <trans-unit id="Resources\daytitle\Content" translate="yes" xml:space="preserve">
+          <source>day</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">день</target>
+        </trans-unit>
+        <trans-unit id="Resources\dateTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target state="translated">Дата</target>
+        </trans-unit>
+        <trans-unit id="Resources\createAccountAppbar\Label" translate="yes" xml:space="preserve">
+          <source>Add account</source>
+          <target state="translated">Добавить аккаунт</target>
+        </trans-unit>
+        <trans-unit id="Resources\createAccount\Content" translate="yes" xml:space="preserve">
+          <source>Add account</source>
+          <target state="translated">Добавить аккаунт</target>
+        </trans-unit>
+        <trans-unit id="Resources\columns\Content" translate="yes" xml:space="preserve">
+          <source>columns</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">столбцы</target>
+        </trans-unit>
+        <trans-unit id="Resources\circles\Content" translate="yes" xml:space="preserve">
+          <source>circles</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">круги</target>
+        </trans-unit>
+        <trans-unit id="Resources\budgetmessage\Text" translate="yes" xml:space="preserve">
+          <source>budget:</source>
+          <target state="translated">бюджет:</target>
+        </trans-unit>
+        <trans-unit id="Resources\addTransactionTitle" translate="yes" xml:space="preserve">
+          <source>Add transaction</source>
+          <target state="new">Add transaction</target>
+        </trans-unit>
+        <trans-unit id="Resources\addtransactionAppbar\Label" translate="yes" xml:space="preserve">
+          <source>Add transaction</source>
+          <target state="translated">Добавить транзакцию</target>
+        </trans-unit>
+        <trans-unit id="Resources\addtransaction\Content" translate="yes" xml:space="preserve">
+          <source>Add transaction</source>
+          <target state="translated">добавить транзакцию</target>
+        </trans-unit>
+        <trans-unit id="Resources\addtitle\Text" translate="yes" xml:space="preserve">
+          <source>add</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">добавить</target>
+        </trans-unit>
+        <trans-unit id="Resources\addsumTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Sum</source>
+          <target state="needs-review-translation">Сумма</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          </trans-unit>
+        <trans-unit id="Resources\addNameTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="translated">Наименование</target>
+        </trans-unit>
+        <trans-unit id="Resources\addmoneyAccountTextBlock" translate="yes" xml:space="preserve">
+          <source>Creating account</source>
+          <target state="new">Creating account</target>
+        </trans-unit>
+        <trans-unit id="Resources\addIncomeTitle" translate="yes" xml:space="preserve">
+          <source>Add income</source>
+          <target state="new">Add income</target>
+        </trans-unit>
+        <trans-unit id="Resources\addincome\Label" translate="yes" xml:space="preserve">
+          <source>Add income</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Добавить доход</target>
+        </trans-unit>
+        <trans-unit id="Resources\addIconTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Icon</source>
+          <target state="translated">Иконка</target>
+        </trans-unit>
+        <trans-unit id="Resources\addexpense\Label" translate="yes" xml:space="preserve">
+          <source>Add expense</source>
+          <target state="translated">Добавить расход</target>
+        </trans-unit>
+        <trans-unit id="Resources\addColorTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Color</source>
+          <target state="translated" state-qualifier="tm-suggestion">Цвет</target>
+        </trans-unit>
+        <trans-unit id="Resources\addcategoryTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Category</source>
+          <target state="translated">Категория</target>
+        </trans-unit>
+        <trans-unit id="Resources\Addbutton\Content" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated">Добавить</target>
+        </trans-unit>
+        <trans-unit id="Resources\addBudgetTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Budget</source>
+          <target state="translated">Бюджет</target>
+        </trans-unit>
+        <trans-unit id="Resources\addAccountTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Account</source>
+          <target state="translated">Аккаунт</target>
+        </trans-unit>
+        <trans-unit id="Resources\addAccountButton\Content" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated">Добавить</target>
+        </trans-unit>
+        <trans-unit id="Resources\addaccount\Label" translate="yes" xml:space="preserve">
+          <source>Add account</source>
+          <target state="translated">Добавить счет</target>
+        </trans-unit>
+        <trans-unit id="Resources\accountTitle" translate="yes" xml:space="preserve">
+          <source>Accounts</source>
+          <target state="new">Accounts</target>
+        </trans-unit>
+        <trans-unit id="Resources\accountTextBlock\Text" translate="yes" xml:space="preserve">
+          <source>Account</source>
+          <target state="translated">Счет</target>
+        </trans-unit>
+        <trans-unit id="Resources\accountpage\Label" translate="yes" xml:space="preserve">
+          <source>Accounts page</source>
+          <target state="translated">Страница аккаунтов</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

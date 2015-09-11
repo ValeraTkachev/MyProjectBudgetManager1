@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="accountpage.Label" xml:space="preserve">
+    <value>Accounts page</value>
+  </data>
+  <data name="accountTextBlock.Text" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="accountTitle" xml:space="preserve">
+    <value>Accounts</value>
+  </data>
+  <data name="addaccount.Label" xml:space="preserve">
+    <value>Add account</value>
+  </data>
+  <data name="addAccountButton.Content" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="addAccountTextBlock.Text" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="addBudgetTextBlock.Text" xml:space="preserve">
+    <value>Budget</value>
+  </data>
+  <data name="Addbutton.Content" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="addcategoryTextBlock.Text" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="addColorTextBlock.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="addexpense.Label" xml:space="preserve">
+    <value>Add expense</value>
+  </data>
+  <data name="addIconTextBlock.Text" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="addincome.Label" xml:space="preserve">
+    <value>Add income</value>
+  </data>
+  <data name="addIncomeTitle" xml:space="preserve">
+    <value>Add income</value>
+  </data>
+  <data name="addmoneyAccountTextBlock" xml:space="preserve">
+    <value>Creating account</value>
+  </data>
+  <data name="addNameTextBlock.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="addsumTextBlock.Text" xml:space="preserve">
+    <value>Sum</value>
+  </data>
+  <data name="addtitle.Text" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="addtransaction.Content" xml:space="preserve">
+    <value>Add transaction</value>
+  </data>
+  <data name="addtransactionAppbar.Label" xml:space="preserve">
+    <value>Add transaction</value>
+  </data>
+  <data name="addTransactionTitle" xml:space="preserve">
+    <value>Add transaction</value>
+  </data>
+  <data name="budgetmessage.Text" xml:space="preserve">
+    <value>budget:</value>
+  </data>
+  <data name="circles.Content" xml:space="preserve">
+    <value>circles</value>
+  </data>
+  <data name="columns.Content" xml:space="preserve">
+    <value>columns</value>
+  </data>
+  <data name="createAccount.Content" xml:space="preserve">
+    <value>Add account</value>
+  </data>
+  <data name="createAccountAppbar.Label" xml:space="preserve">
+    <value>Add account</value>
+  </data>
+  <data name="dateTextBlock.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="daytitle.Content" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="delete.Label" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="edit.Label" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="editaccount.Label" xml:space="preserve">
+    <value>Edit account</value>
+  </data>
+  <data name="editexpense.Label" xml:space="preserve">
+    <value>Edit expense</value>
+  </data>
+  <data name="editexpenseTitle" xml:space="preserve">
+    <value>Edit expense</value>
+  </data>
+  <data name="editincome.Label" xml:space="preserve">
+    <value>Edit income</value>
+  </data>
+  <data name="edittransaction.Label" xml:space="preserve">
+    <value>Edit transaction</value>
+  </data>
+  <data name="editTransactionTitle" xml:space="preserve">
+    <value>Edit transaction</value>
+  </data>
+  <data name="expenseButton.Content" xml:space="preserve">
+    <value>expense</value>
+  </data>
+  <data name="expensesMainTitle.Text" xml:space="preserve">
+    <value>Expenses&gt;</value>
+  </data>
+  <data name="expensesMessage.Text" xml:space="preserve">
+    <value>Expenses $0</value>
+  </data>
+  <data name="ExpensesTitle" xml:space="preserve">
+    <value>Expenses</value>
+  </data>
+  <data name="expenseTextBlock.Text" xml:space="preserve">
+    <value>Expense</value>
+  </data>
+  <data name="expenseTitle" xml:space="preserve">
+    <value>Plan expense</value>
+  </data>
+  <data name="group.Label" xml:space="preserve">
+    <value>Grouping</value>
+  </data>
+  <data name="incomeButton.Content" xml:space="preserve">
+    <value>income</value>
+  </data>
+  <data name="IncomeMainTitle.Text" xml:space="preserve">
+    <value>Incomes&gt;</value>
+  </data>
+  <data name="incomeTextBlock.Text" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="IncomeTitle" xml:space="preserve">
+    <value>Incomes</value>
+  </data>
+  <data name="message.Text" xml:space="preserve">
+    <value>You haven't spent anything yet...</value>
+  </data>
+  <data name="miniincomeTextBlock.Text" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="MoneyAccountMainTitle.Text" xml:space="preserve">
+    <value>Accounts&gt;</value>
+  </data>
+  <data name="MoneyAccountsTitle" xml:space="preserve">
+    <value>Accounts</value>
+  </data>
+  <data name="moneyAccountTextBlock.Text" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="monthtitle.Content" xml:space="preserve">
+    <value>month</value>
+  </data>
+  <data name="onMoneyAccountTextBlock.Text" xml:space="preserve">
+    <value>On the account</value>
+  </data>
+  <data name="paymentAppbar.Label" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="periodtitle.Content" xml:space="preserve">
+    <value>period</value>
+  </data>
+  <data name="plan.Text" xml:space="preserve">
+    <value>plan</value>
+  </data>
+  <data name="plannedTitle.Text" xml:space="preserve">
+    <value>planned expenses</value>
+  </data>
+  <data name="restTextBlock.Text" xml:space="preserve">
+    <value>Rest</value>
+  </data>
+  <data name="saveButton.Content" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="sendingButton.Content" xml:space="preserve">
+    <value>transfer</value>
+  </data>
+  <data name="sort.Label" xml:space="preserve">
+    <value>Sorting</value>
+  </data>
+  <data name="spent.Text" xml:space="preserve">
+    <value>spent:</value>
+  </data>
+  <data name="statiscticTitle" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="StatisticMainTitle.Text" xml:space="preserve">
+    <value>Statistics&gt;</value>
+  </data>
+  <data name="transactionTitle" xml:space="preserve">
+    <value>Transactions</value>
+  </data>
+  <data name="trasnationsMainTitle.Text" xml:space="preserve">
+    <value>Transactions&gt;</value>
+  </data>
+  <data name="weektitle.Content" xml:space="preserve">
+    <value>week</value>
+  </data>
+  <data name="yeartitle.Content" xml:space="preserve">
+    <value>year</value>
+  </data>
+  <data name="addexpenseButton.Content" xml:space="preserve">
+    <value>Add expense</value>
+  </data>
+  <data name="balance.Text" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="cash.Content" xml:space="preserve">
+    <value>cash flow</value>
+  </data>
+  <data name="categories.Content" xml:space="preserve">
+    <value>by categories</value>
+  </data>
+  <data name="fromMoneyAccount.Text" xml:space="preserve">
+    <value>From account</value>
+  </data>
+  <data name="moneytransactionTitle" xml:space="preserve">
+    <value>Funds Transaction</value>
+  </data>
+  <data name="onAccount.Text" xml:space="preserve">
+    <value>On whose account</value>
+  </data>
+  <data name="SenderAccount.Text" xml:space="preserve">
+    <value>From what account</value>
+  </data>
+  <data name="AllCategories" xml:space="preserve">
+    <value>All Categories</value>
+  </data>
+  <data name="AllTransactions" xml:space="preserve">
+    <value>All Transactions</value>
+  </data>
+  <data name="AllUsers" xml:space="preserve">
+    <value>All Users</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="CultureInfo" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="TitleMessageSubcategory" xml:space="preserve">
+    <value>Planned spending limit is exceeded</value>
+  </data>
+  <data name="WarningMessageSubcategory" xml:space="preserve">
+    <value>Limit your expenditure planned for this category in the case of adding another flow rate is exceeded. If you want still want to add another expense, click continue. If you want to cancel the add, click Cancel.</value>
+  </data>
+  <data name="WarningMessageTransaction" xml:space="preserve">
+    <value>Limit your planned expenses in case you add a transaction will be exceeded. If you still want to add another transaction, click continue. If you want to cancel adding another transaction, click Cancel.</value>
+  </data>
+  <data name="WarningAddMessage" xml:space="preserve">
+    <value>For adding new item, you should fill all fields.</value>
+  </data>
+  <data name="WarningAddTitle" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="WarningGoToAllSubcategories" xml:space="preserve">
+    <value>For viewing subcategories for this expense you should choose it, than press on button.</value>
+  </data>
+  <data name="ExpensesTitleForCategory" xml:space="preserve">
+    <value>Expenses</value>
+  </data>
+  <data name="SmallLetterExpense.Text" xml:space="preserve">
+    <value>expense</value>
+  </data>
+  <data name="SmallLetterIncome.Text" xml:space="preserve">
+    <value>income</value>
+  </data>
+</root>

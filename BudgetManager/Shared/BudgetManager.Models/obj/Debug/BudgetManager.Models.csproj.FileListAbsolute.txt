@@ -1,0 +1,17 @@
+D:\projects\BudgetManager\Shared\BudgetManager.Models\bin\Debug\BudgetManager.Models.dll
+D:\projects\BudgetManager\Shared\BudgetManager.Models\bin\Debug\BudgetManager.Models.pdb
+D:\projects\BudgetManager\Shared\BudgetManager.Models\bin\Debug\BudgetManager.Models.pri
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\BudgetManager.Models.dll
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\BudgetManager.Models.pdb
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\priconfig.xml
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\priconfig.xml.intermediate
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\layout.resfiles
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\layout.resfiles.intermediate
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\resources.resfiles
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\resources.resfiles.intermediate
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\pri.resfiles
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\pri.resfiles.intermediate
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\qualifiers.txt
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\qualifiers.txt.intermediate
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\projects\BudgetManager\Shared\BudgetManager.Models\obj\Debug\BudgetManager.Models.csprojResolveAssemblyReference.cache

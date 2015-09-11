@@ -1,0 +1,1 @@
+D:\projects\BudgetManager\WindowsPhone\BudgetManager.WindowsPhone\BudgetManager.WindowsPhone.csproj;neutral

@@ -1,0 +1,136 @@
+﻿<common:ViewBase
+    x:Name="pageRoot"
+    x:Class="BudgetManager.WindowsBudget.Views.EditTransaction.EditTransaction"
+    xmlns:VM="using:BudgetManager.Shared"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BudgetManager.WindowsBudget.Views.EditTransaction"
+    xmlns:common="using:BudgetManager.WindowsBudget.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:mybehaviors="using:BudgetManager.WindowsBudget.Behaviors"
+    xmlns:controls="using:BudgetManager.WindowsBudget.Views.Controls"
+    DataContext="{Binding Source={StaticResource Locator}, Path=EditTransactionViewModel}"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+    </Page.Resources>
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" Background="{StaticResource ForAppBarBrush}" VerticalScrollBarVisibility="Disabled">
+
+        <Grid Background="{StaticResource BackgroundBrush}">
+            <Grid.ChildrenTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition/>
+                </TransitionCollection>
+            </Grid.ChildrenTransitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <ContentControl Style="{StaticResource CoinImage}"
+                        Grid.Row="2"/>
+            <controls:MainPanel/>
+
+            <StackPanel Orientation="Vertical" 
+                        Grid.RowSpan="2"
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Left"
+                        Margin="120,0,0,0"
+                        Grid.Row="1" 
+                        Width="360">
+
+                    <TextBlock x:Uid="addNameTextBlock"
+                           Style="{StaticResource BasicTextBlock}" />
+
+                    <controls:ExtendedTextBoxForNames   
+                    Margin="0,0,10,0" 
+                    Style="{StaticResource BasicTextBox}"
+                    Text="{Binding Path = SelectedTransaction.Name, Mode=TwoWay}"/>
+
+                    <TextBlock x:Uid="addcategoryTextBlock"
+                           Style="{StaticResource BasicTextBlock}" />
+
+                    <ComboBox x:Name="CategoriesExpense" 
+                              Style="{StaticResource CategoriesexpenseCombobox}" 
+                              Margin="0,0,10,0" 
+                              ItemsSource="{Binding CategoriesReciever}" 
+                              SelectedItem="{Binding CategoryReciever,Mode=TwoWay}">
+
+                    </ComboBox>
+
+                    <TextBlock x:Uid="addsumTextBlock"
+                           Style="{StaticResource BasicTextBlock}" 
+                           Width="162"
+                           HorizontalAlignment="Left" />
+
+                    <TextBox x:Name="Sum"
+                         Style="{StaticResource BasicTextBox}"
+                         Text="{Binding Path = NewCount, Mode=TwoWay}" 
+                         HorizontalAlignment="Left" Width="350">
+
+                        <i:Interaction.Behaviors>
+                            <mybehaviors:NumericTextBox/>
+                        </i:Interaction.Behaviors>
+
+                    </TextBox>
+
+                    <TextBlock x:Uid="addAccountTextBlock"
+                           Style="{StaticResource BasicTextBlock}" />
+
+                    <ComboBox x:Name="Username" 
+                              Style="{StaticResource userCombobox}" 
+                              Margin="0,0,10,0" 
+                              ItemsSource="{Binding Users}" 
+                              SelectedItem="{Binding NewUser,Mode=TwoWay}" >
+
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="SelectionChanged">
+                                <core:InvokeCommandAction Command="{Binding SelectionUserChange}"/>
+                            </core:EventTriggerBehavior>
+                        </i:Interaction.Behaviors>
+
+                    </ComboBox>
+
+                    <TextBlock x:Uid="accountTextBlock"
+                           Style="{StaticResource BasicTextBlock}"/>
+
+                    <ComboBox x:Name="MoneyAccount" 
+                              Style="{StaticResource MoneyAccountCombobox}" 
+                              Margin="0,0,10,0" 
+                              ItemsSource="{Binding CategoriesSender}" 
+                              SelectedItem="{Binding CategorySender,Mode=TwoWay}">
+
+                    </ComboBox>
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <TextBlock x:Uid="dateTextBlock"
+                               Text="Дата"
+                               Style="{StaticResource BasicTextBlock}"
+                               Width="94" />
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+
+                    <controls:ExtendedDatePanel/>
+
+                </StackPanel>
+
+                    <Button x:Name="UpdateAccount" 
+                        x:Uid="saveButton"
+                        Width="359" 
+                        Command="{Binding UpdateCommand}"
+                        Style="{StaticResource AddButtonStyle}"
+                        Margin="-2,20,0,0"/>
+
+                </StackPanel>
+
+        </Grid>
+    </ScrollViewer>
+</common:ViewBase>

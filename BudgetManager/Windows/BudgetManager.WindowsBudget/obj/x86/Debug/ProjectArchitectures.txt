@@ -1,0 +1,11 @@
+D:\projects\BudgetManager\Shared\BudgetManager.Core\BudgetManager.Core.csproj;neutral
+D:\projects\BudgetManager\Shared\BudgetManager.Core\BudgetManager.Core.csproj;neutral
+D:\projects\BudgetManager\Shared\BudgetManager.DAL\BudgetManager.DAL.csproj;neutral
+D:\projects\BudgetManager\Shared\BudgetManager.DAL\BudgetManager.DAL.csproj;neutral
+D:\projects\BudgetManager\Shared\BudgetManager.DAL\BudgetManager.DAL.csproj;neutral
+D:\projects\BudgetManager\Shared\BudgetManager.Models\BudgetManager.Models.csproj;neutral
+D:\projects\BudgetManager\Shared\BudgetManager.Models\BudgetManager.Models.csproj;neutral
+D:\projects\BudgetManager\Shared\BudgetManager.Models\BudgetManager.Models.csproj;neutral
+D:\projects\BudgetManager\Shared\BudgetManager.Models\BudgetManager.Models.csproj;neutral
+D:\projects\BudgetManager\Shared\BudgetManager.Shared\BudgetManager.Shared.csproj;neutral
+D:\projects\BudgetManager\Windows\BudgetManager.WindowsBudget\BudgetManager.WindowsBudget.csproj;x86

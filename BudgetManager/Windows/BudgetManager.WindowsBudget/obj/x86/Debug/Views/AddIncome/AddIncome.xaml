@@ -1,0 +1,146 @@
+﻿<common:ViewBase
+    x:Name="pageRoot"
+    x:Class="BudgetManager.WindowsBudget.Views.AddIncome.AddIncome"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BudgetManager.WindowsBudget.Views.AddIncome"
+    xmlns:common="using:BudgetManager.WindowsBudget.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:VM="using:BudgetManager.Shared"
+    xmlns:mybehaviors="using:BudgetManager.WindowsBudget.Behaviors" 
+    DataContext="{Binding Source={StaticResource Locator}, Path=AddIncomeViewModel}" 
+    xmlns:controls="using:BudgetManager.WindowsBudget.Views.Controls"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <x:String x:Key="AppName"></x:String>
+    </Page.Resources>
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" Background="{StaticResource ForAppBarBrush}" VerticalScrollBarVisibility="Disabled">
+
+        <Grid Background="{StaticResource BackgroundBrush}">
+            <Grid.ChildrenTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition/>
+                </TransitionCollection>
+            </Grid.ChildrenTransitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <ContentControl Style="{StaticResource CoinImage}" 
+                        Grid.Row="2"/>
+            
+            <controls:MainPanel/>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Margin="120,0,0,0"
+                   Grid.Row="1"
+                   Width="330">
+
+
+
+                    <TextBlock x:Uid="addNameTextBlock"
+                           Style="{StaticResource BasicTextBlock}" />
+
+                    <controls:TextBoxForNames x:Name="IncomeName"
+                                          Style="{StaticResource BasicTextBox}"
+                                          Margin="0,0,10,0" 
+                                          Text="{Binding NewName, Mode=TwoWay}"/>
+
+                    <TextBlock x:Uid="incomeTextBlock"
+                           Style="{StaticResource BasicTextBlock}"/>
+
+                    <TextBox x:Name="Income"  
+                         Margin="0,0,10,0" 
+                         Style="{StaticResource BasicTextBox}"
+                         Text="{Binding NewBudgeted, Mode=TwoWay}">
+
+                        <i:Interaction.Behaviors>
+                            <mybehaviors:NumericTextBox/>
+                        </i:Interaction.Behaviors>
+
+                    </TextBox>
+
+                    <TextBlock x:Uid="addAccountTextBlock"
+                           Style="{StaticResource BasicTextBlock}" />
+
+                    <ComboBox x:Name="Username" 
+                          Height="35"
+                          Margin="0,0,10,0" 
+                          Style="{StaticResource userCombobox}"
+                          ItemsSource="{Binding Users}" 
+                          SelectedItem="{Binding NewUser,Mode=TwoWay}">
+
+                    </ComboBox>
+                    <TextBlock x:Uid="moneyAccountTextBlock"
+                           Style="{StaticResource BasicTextBlock}" />
+
+                    <ComboBox x:Name="MoneyAccount" 
+                          Margin="0,0,10,0" 
+                          Style="{StaticResource moneyAccountCombobox}"
+                          ItemsSource="{Binding Path = NewUser.Categoriesaccount}"
+                          SelectedItem="{Binding SelectedMoneyAccount,Mode=TwoWay}">
+                    </ComboBox>
+                    <StackPanel Orientation="Horizontal">
+
+                        <TextBlock x:Uid="addColorTextBlock"
+                               Style="{StaticResource BasicTextBlock}"
+                               Width="201" />
+
+                        <TextBlock x:Uid="addIconTextBlock"
+                               Style="{StaticResource BasicTextBlock}"
+                               Width="81"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"  
+                            Margin="0,0,10,30">
+
+                        <ComboBox x:Name="colorBox"
+                              Width="141" 
+                              Height="30" 
+                              Style="{StaticResource colorComboboxForAdding}"
+                              ItemsSource="{Binding Colors}"
+                              Margin="1,0,60,0" 
+                              SelectedItem="{Binding NewColor,Mode=TwoWay}">
+
+                        </ComboBox>
+
+                    <ComboBox x:Name="iconComboBox"
+                              Width="117" 
+                              Height="30" 
+                              Style="{StaticResource iconComboboxForAdding}"
+                              ItemsSource="{Binding Icons}" 
+                              Margin="1,0,0,0"
+                              SelectedItem="{Binding NewIcon,Mode=TwoWay}">
+
+                    </ComboBox>
+                    </StackPanel>
+
+                    <TextBlock x:Uid="dateTextBlock"
+                           Style="{StaticResource BasicTextBlock}"
+                           Width="94"
+                           HorizontalAlignment="Left" Margin="0,-20,0,0"/>
+
+                    <controls:DatePanel/>
+
+                    <Button x:Uid="saveButton"
+                        x:Name="UpdateAccount" 
+                        Style="{StaticResource AddButtonStyle}" 
+                        Command="{Binding AddCommand}" 
+                        Height="40"
+                        Margin="-3,15,0,0"
+                        Width="329"/>
+
+            </StackPanel>
+        </Grid>
+
+    </ScrollViewer>
+    
+</common:ViewBase>
+

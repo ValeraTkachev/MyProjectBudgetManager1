@@ -1,0 +1,1021 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PriInfo>
+  <PriHeader>
+    <WindowsEnvironment checksum="0" version="1.0" />
+    <AutoMerge>false</AutoMerge>
+  </PriHeader>
+  <QualifierInfo>
+    <Qualifiers>
+      <Qualifier index="1" scoreAsDefault="0.0" priority="900" value="QPS-PLOC" name="Language" />
+      <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+    </Qualifiers>
+    <QualifierSets>
+      <QualifierSet index="1">
+        <Qualifier index="1" scoreAsDefault="0.0" priority="900" value="QPS-PLOC" name="Language" />
+      </QualifierSet>
+      <QualifierSet index="2">
+        <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+      </QualifierSet>
+    </QualifierSets>
+    <Decisions>
+      <Decision index="1">
+        <QualifierSet index="2">
+          <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+        </QualifierSet>
+      </Decision>
+    </Decisions>
+  </QualifierInfo>
+  <ResourceMap name="BudgetManager.WindowsBudget" primary="true">
+    <VersionInfo version="1.0" />
+    <ResourceMapSubtree index="1" name="Resources">
+      <NamedResource index="1" name="ExpensesTitleForCategory" uri="ms-resource://BudgetManager.WindowsBudget/Resources/ExpensesTitleForCategory">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Расходы</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="WarningGoToAllSubcategories" uri="ms-resource://BudgetManager.WindowsBudget/Resources/WarningGoToAllSubcategories">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Для просмотра подкатегорий для этого расхода следует выбрать его прежде, чем нажать на кнопку.</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="WarningAddMessage" uri="ms-resource://BudgetManager.WindowsBudget/Resources/WarningAddMessage">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Для добавления нового элемента, следует заполнить все поля.</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="WarningAddTitle" uri="ms-resource://BudgetManager.WindowsBudget/Resources/WarningAddTitle">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Предупреждение</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="WarningMessageTransaction" uri="ms-resource://BudgetManager.WindowsBudget/Resources/WarningMessageTransaction">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Лимит запланированных Вами расходов в случае добавлении транзакции будет превышен. Если вы все-равно хотите добавить еще транзакцию нажмите Продолжить. Если вы хотите отменить добавление еще одной транзакции, нажмите Отменить.</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="WarningMessageSubcategory" uri="ms-resource://BudgetManager.WindowsBudget/Resources/WarningMessageSubcategory">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Лимит запланированных Вами расходов для данной категории в случае добавления еще одного расхода будет превышен. Если вы хотите все-равно хотите добавить еще один расход нажмите Продолжить. Если вы хотите отменить добавление , нажмите Отменить.</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="TitleMessageSubcategory" uri="ms-resource://BudgetManager.WindowsBudget/Resources/TitleMessageSubcategory">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Лимит запланированных  расходов превышен</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="CultureInfo" uri="ms-resource://BudgetManager.WindowsBudget/Resources/CultureInfo">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>ru</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="Continue" uri="ms-resource://BudgetManager.WindowsBudget/Resources/Continue">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Продолжить</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="Cancel" uri="ms-resource://BudgetManager.WindowsBudget/Resources/Cancel">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Отмена</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="AllUsers" uri="ms-resource://BudgetManager.WindowsBudget/Resources/AllUsers">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Все пользователи</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="AllTransactions" uri="ms-resource://BudgetManager.WindowsBudget/Resources/AllTransactions">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Все транзакции</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="AllCategories" uri="ms-resource://BudgetManager.WindowsBudget/Resources/AllCategories">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Все категории</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="SenderAccount\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/SenderAccount\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>С какого аккаунта</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="onAccount\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/onAccount\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>На чей аккаунт</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="fromMoneyAccount\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/fromMoneyAccount\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Со счета</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="categories\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/categories\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>по категориям</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="cash\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/cash\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>денежный поток</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="balance\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/balance\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Баланс</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addexpenseButton\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addexpenseButton\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Добавить расход</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="yeartitle\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/yeartitle\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>год</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="weektitle\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/weektitle\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>неделя</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="trasnationsMainTitle\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/trasnationsMainTitle\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Транзакции&gt;</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="StatisticMainTitle\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/StatisticMainTitle\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Статистика&gt;</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="spent\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/spent\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>потрачено:</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="sort\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/sort\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Сортировка</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="sendingButton\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/sendingButton\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>перевод</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="saveButton\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/saveButton\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Сохранить</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="restTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/restTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Остаток</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="plannedTitle\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/plannedTitle\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>запланированные расходы</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="plan\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/plan\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>запланировать</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="periodtitle\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/periodtitle\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>период</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="paymentAppbar\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/paymentAppbar\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>осуществить перевод</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="onMoneyAccountTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/onMoneyAccountTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>На счет</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="monthtitle\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/monthtitle\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>месяц</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="moneyAccountTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/moneyAccountTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Счет</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="MoneyAccountMainTitle\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/MoneyAccountMainTitle\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Счета&gt;</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="miniincomeTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/miniincomeTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Доход</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="message\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/message\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Вы еще ничего не потратили...</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="incomeTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/incomeTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Доход</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="IncomeMainTitle\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/IncomeMainTitle\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Доходы&gt;</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="incomeButton\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/incomeButton\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>доход</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="group\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/group\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Сгруппировать</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="expensesMessage\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/expensesMessage\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Расходы $0</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="expensesMainTitle\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/expensesMainTitle\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Расходы&gt;</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="expenseButton\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/expenseButton\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>расход</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="edittransaction\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/edittransaction\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Редактировать транзакцию</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="editincome\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/editincome\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Редактировать доход</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="editexpense\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/editexpense\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Редактировать расход</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="editaccount\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/editaccount\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Редактировать счет</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="edit\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/edit\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>редактировать</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="delete\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/delete\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>удалить</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="daytitle\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/daytitle\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>день</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="dateTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/dateTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Дата</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="createAccountAppbar\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/createAccountAppbar\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Добавить аккаунт</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="createAccount\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/createAccount\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Добавить аккаунт</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="columns\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/columns\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>столбцы</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="circles\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/circles\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>круги</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="budgetmessage\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/budgetmessage\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>бюджет:</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addtransactionAppbar\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addtransactionAppbar\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Добавить транзакцию</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addtransaction\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addtransaction\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>добавить транзакцию</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addtitle\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addtitle\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>добавить</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addsumTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addsumTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Сумма</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addNameTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addNameTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Наименование</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addincome\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addincome\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Добавить доход</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addIconTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addIconTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Иконка</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addexpense\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addexpense\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Добавить расход</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addColorTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addColorTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Цвет</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addcategoryTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addcategoryTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Категория</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="Addbutton\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/Addbutton\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Добавить</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addBudgetTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addBudgetTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Бюджет</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addAccountTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addAccountTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Аккаунт</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addAccountButton\Content" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addAccountButton\Content">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Добавить</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="addaccount\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/addaccount\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Добавить счет</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="accountTextBlock\Text" uri="ms-resource://BudgetManager.WindowsBudget/Resources/accountTextBlock\Text">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Счет</Value>
+        </Candidate>
+      </NamedResource>
+      <NamedResource index="1" name="accountpage\Label" uri="ms-resource://BudgetManager.WindowsBudget/Resources/accountpage\Label">
+        <Decision index="1">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+        </Decision>
+        <Candidate type="String">
+          <QualifierSet index="2">
+            <Qualifier index="2" scoreAsDefault="0.0" priority="900" value="RU-RU" name="Language" />
+          </QualifierSet>
+          <Value>Страница аккаунтов</Value>
+        </Candidate>
+      </NamedResource>
+    </ResourceMapSubtree>
+  </ResourceMap>
+</PriInfo>
