@@ -1,7 +1,0 @@
-<XamlCompilerSaveState>
-  <ReferenceAssemblyList>
-    <ReferenceAssembly PathName="d:\projects\budgetmanager\shared\budgetmanager.dal\bin\debug\budgetmanager.dal.dll" HashGuid="ac0ffd36-0892-b5a3-aa4d-7e7b5c4b5897" />
-    <ReferenceAssembly PathName="d:\projects\budgetmanager\shared\budgetmanager.models\bin\debug\budgetmanager.models.dll" HashGuid="198129a7-18c3-0dca-c9da-ace34e123983" />
-    <ReferenceAssembly PathName="d:\projects\budgetmanager\packages\sqlitepcl.3.8.7.2\lib\netcore451\sqlitepcl.dll" HashGuid="a405761a-bd1d-dc16-54b5-36df2e9981c5" />
-  </ReferenceAssemblyList>
-</XamlCompilerSaveState>
